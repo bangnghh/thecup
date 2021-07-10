@@ -2190,16 +2190,30 @@ p {
     .post-body .news-holder .news-main .news-other-post .other-post .other-post-title {
       margin-top: 0px; }
 
-.register-body {
-  background-color: #E8EFFA; }
-  .register-body .logo-thecup {
+.login-body .register-holder {
+  height: 550px !important; }
+  .login-body .register-holder .upper {
+    padding: 40px 40px 40px 40px !important; }
+  .login-body .register-holder .forgot-password {
+    margin-top: 20px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    color: #2270E8;
+    text-align: center; }
+
+.register-body, .login-body {
+  background-color: #E8EFFA;
+  position: relative;
+  padding-top: 144px; }
+  .register-body .logo-thecup, .login-body .logo-thecup {
     display: block;
     width: 198px;
     height: 60px;
     margin-left: auto;
-    margin-right: auto;
-    margin-top: 144px; }
-  .register-body .register-holder {
+    margin-right: auto; }
+  .register-body .register-holder, .login-body .register-holder {
     width: 450px;
     height: 600px;
     margin-top: 32px;
@@ -2209,9 +2223,9 @@ p {
     overflow: hidden;
     box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.07);
     border-radius: 5px; }
-    .register-body .register-holder .upper {
-      padding: 40px 40px 45px 40px; }
-      .register-body .register-holder .upper .reg-title {
+    .register-body .register-holder .upper, .login-body .register-holder .upper {
+      padding: 40px 40px 54px 40px; }
+      .register-body .register-holder .upper .reg-title, .login-body .register-holder .upper .reg-title {
         text-align: center;
         font-style: normal;
         font-weight: 900;
@@ -2221,23 +2235,23 @@ p {
         letter-spacing: 0.03em;
         text-transform: uppercase;
         color: #2C3E50; }
-      .register-body .register-holder .upper .oauth-button {
+      .register-body .register-holder .upper .oauth-button, .login-body .register-holder .upper .oauth-button {
         display: flex;
         justify-content: space-between;
         margin-top: 38px; }
-        .register-body .register-holder .upper .oauth-button .btn-facebook {
+        .register-body .register-holder .upper .oauth-button .btn-facebook, .login-body .register-holder .upper .oauth-button .btn-facebook {
           position: relative;
           width: 180px;
           height: 40px;
           background: #1773EA;
           border-radius: 8px;
           border: none; }
-          .register-body .register-holder .upper .oauth-button .btn-facebook img {
+          .register-body .register-holder .upper .oauth-button .btn-facebook img, .login-body .register-holder .upper .oauth-button .btn-facebook img {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
             left: 16px; }
-          .register-body .register-holder .upper .oauth-button .btn-facebook span {
+          .register-body .register-holder .upper .oauth-button .btn-facebook span, .login-body .register-holder .upper .oauth-button .btn-facebook span {
             font-style: normal;
             font-weight: bold;
             font-size: 14px;
@@ -2245,17 +2259,17 @@ p {
             align-items: center;
             text-align: center;
             color: #FFFFFF; }
-        .register-body .register-holder .upper .oauth-button .btn-google {
+        .register-body .register-holder .upper .oauth-button .btn-google, .login-body .register-holder .upper .oauth-button .btn-google {
           position: relative;
           width: 180px;
           height: 40px;
           border-radius: 8px; }
-          .register-body .register-holder .upper .oauth-button .btn-google img {
+          .register-body .register-holder .upper .oauth-button .btn-google img, .login-body .register-holder .upper .oauth-button .btn-google img {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
             left: 16px; }
-          .register-body .register-holder .upper .oauth-button .btn-google span {
+          .register-body .register-holder .upper .oauth-button .btn-google span, .login-body .register-holder .upper .oauth-button .btn-google span {
             font-style: normal;
             font-weight: bold;
             font-size: 14px;
@@ -2263,13 +2277,13 @@ p {
             align-items: center;
             text-align: center;
             color: #2C3E50; }
-      .register-body .register-holder .upper .divider {
+      .register-body .register-holder .upper .divider, .login-body .register-holder .upper .divider {
         width: 100%;
         height: 1px;
         border: 1px solid #E8E8E8;
         position: relative;
         margin-top: 44px; }
-        .register-body .register-holder .upper .divider:before {
+        .register-body .register-holder .upper .divider:before, .login-body .register-holder .upper .divider:before {
           padding: 0px 30px;
           content: "HOẶC";
           top: -10px;
@@ -2285,7 +2299,7 @@ p {
           text-transform: uppercase;
           color: #B2B2B2;
           background: white; }
-      .register-body .register-holder .upper .username {
+      .register-body .register-holder .upper .username, .login-body .register-holder .upper .username {
         margin-top: 30px;
         font-style: normal;
         font-weight: normal;
@@ -2294,7 +2308,7 @@ p {
         display: flex;
         align-items: center;
         color: #2C3E50; }
-      .register-body .register-holder .upper .email, .register-body .register-holder .upper .password {
+      .register-body .register-holder .upper .email, .register-body .register-holder .upper .password, .login-body .register-holder .upper .email, .login-body .register-holder .upper .password {
         margin-top: 11px;
         font-style: normal;
         font-weight: normal;
@@ -2303,9 +2317,12 @@ p {
         display: flex;
         align-items: center;
         color: #2C3E50; }
-      .register-body .register-holder .upper .input-group {
+      .register-body .register-holder .upper .input-group, .login-body .register-holder .upper .input-group {
         margin-top: 5px; }
-      .register-body .register-holder .upper .btn-reg {
+        .register-body .register-holder .upper .input-group .form-control, .login-body .register-holder .upper .input-group .form-control {
+          font-size: 14px;
+          color: #B2B2B2; }
+      .register-body .register-holder .upper .btn-reg, .login-body .register-holder .upper .btn-reg {
         width: 100%;
         height: 44px;
         margin-top: 30px;
@@ -2318,25 +2335,47 @@ p {
         align-items: center;
         text-align: center;
         color: #FFFFFF; }
-    .register-body .register-holder .lower .login-block {
+    .register-body .register-holder .lower .login-block, .login-body .register-holder .lower .login-block {
       width: 100%;
       height: 50px;
       background: #DCEAFF;
       display: flex;
       align-items: center;
       justify-content: center; }
-      .register-body .register-holder .lower .login-block .text {
+      .register-body .register-holder .lower .login-block .text, .login-body .register-holder .lower .login-block .text {
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
         line-height: 21px;
         color: #2C3E50; }
-      .register-body .register-holder .lower .login-block .login {
+      .register-body .register-holder .lower .login-block .login, .login-body .register-holder .lower .login-block .login {
         margin-left: 4px;
         font-style: normal;
         font-weight: bold;
         font-size: 14px;
         line-height: 16px;
         color: #2270E8; }
+  .register-body .exit-button, .login-body .exit-button {
+    width: 48px;
+    text-align: center;
+    position: absolute;
+    top: 52px;
+    right: 90px; }
+    .register-body .exit-button .border, .login-body .exit-button .border {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 25px;
+      border: 1px solid #767676;
+      box-sizing: border-box; }
+    .register-body .exit-button p, .login-body .exit-button p {
+      margin-top: 8px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 18px;
+      color: #767676; }
 
 /*# sourceMappingURL=style.css.map */
