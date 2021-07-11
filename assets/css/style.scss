@@ -249,7 +249,9 @@ p{
     }
   }
   .btn-radio-prev{
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     left: -5%;
     top: 40%;
@@ -266,7 +268,9 @@ p{
     }
   }
   .btn-radio-next{
-    display: block;
+    isplay: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     right: -5%;
     top: 40%;

@@ -213,7 +213,9 @@ p {
       background-color: #E8EFFA;
       transform: translateY(30px); }
   .radio-holder .btn-radio-prev {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     left: -5%;
     top: 40%;
@@ -228,7 +230,9 @@ p {
       align-items: center;
       margin-left: 5px; }
   .radio-holder .btn-radio-next {
-    display: block;
+    isplay: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     right: -5%;
     top: 40%;
