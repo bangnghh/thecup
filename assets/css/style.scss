@@ -9,6 +9,10 @@ html,body{
 }
 a{
   text-decoration: none;
+  color: inherit;
+  &:hover{
+    color: inherit;
+  }
 }
 a, button {
   transition: 0.3s;
@@ -70,7 +74,7 @@ p{
 }
 .carousel-holder{
   position: relative;
-  margin-top: 14px;
+  margin-top: 30px;
   height: 420px;
   padding-left: 30px;
   padding-right: 30px;
@@ -195,6 +199,8 @@ p{
       font-weight: 500;
       color: #22539D;
       line-height: 18.75px;
+      display: inline-flex;
+      align-items: center;
     }
   }
   .radio-frame{
@@ -2485,10 +2491,12 @@ p{
             align-items: center;
             justify-content: space-between;
             .author{
-              display: inline-flex;
-              align-items: center;
-              .material-icons{
-                font-size: 20px;
+              a{
+                display: inline-flex;
+                align-items: center;
+                .material-icons{
+                  font-size: 20px;
+                }
               }
               span{
                 margin-right: 7px;
@@ -2978,6 +2986,204 @@ p{
       font-size: 15px;
       line-height: 18px;
       color: #767676;
+    }
+  }
+}
+// My account page
+.my-account-body{
+  .contact-holder{
+    margin-top: 60px;
+    .contact-left{
+      .title{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        color: #1B3864;
+      }
+      .number{
+        margin-top: 15px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 140%;
+        letter-spacing: 0.1em;
+        color: #000000;
+      }
+      .mail,.addr{
+        margin-top: 15px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 140%;
+        color: #000000;
+      }
+      .text{
+        margin-top: 24px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 140%;
+        color: #767676;
+        white-space: pre-line;
+      }
+      .phone-text{
+        margin-top: 15px;
+      }
+      .email{
+        margin-top: 60px;
+      }
+      .address{
+        margin-top: 60px;
+      }
+    }
+    .right{
+      width: 54%;
+      padding-right: 60px;
+      border-right: 1px solid #DDDDDD;
+      .title{
+        font-style: normal;
+        font-weight: 900;
+        font-size: 16px;
+        line-height: 140%;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #1B3864;
+      }
+      .input-name{
+        margin-top: 20px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        color: #2C3E50;
+      }
+      .form-floating{
+        label{
+          font-size: 14px;
+          opacity: 0.5;
+        }
+      }
+      .btn-primary{
+        margin-top: 25px;
+        border: none;
+        border-radius: 8px;
+        background-color: #2270E8;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+        padding: 14px 44px;
+      }
+      .upload-avatar{
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-top: 20px;
+        .text{
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 19px;
+          display: flex;
+          align-items: center;
+          color: #333333;
+        }
+        .upload-button{
+          width: 100px;
+          height: 100px;
+          background: #E8EFFA;
+          border: 5px solid #DCEAFF;
+          box-sizing: border-box;
+          border-radius: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto;
+          img{
+
+          }
+        }
+        .input{
+          position: absolute;
+          height: 100%;
+          left: 0;
+          outline: 0;
+          opacity: 0;
+          top: 0;
+          width: 100%
+        }
+      }
+      .input-group{
+        margin-top: 5px;
+      }
+      .form-control{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 21px;
+        color: #B3B3B3;
+      }
+      .margin-top{
+        margin-top: 60px;
+      }
+    }
+    .left{
+      width: 46%;
+      padding-left: 60px;
+      .text-head{
+        display: flex;
+        justify-content: space-between;
+        .text{
+          font-style: normal;
+          font-weight: 900;
+          font-size: 16px;
+          line-height: 140%;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          text-align: left;
+          color: #1B3864;
+        }
+        .history{
+          font-style: normal;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 150%;
+          color: #2270E8;
+        }
+      }
+      .trial-card{
+        margin-top: 20px;
+        height: 183px;
+        width: 100%;
+        background-image: url("/thecup/resources/img/trial-card.svg");
+        background-repeat: no-repeat;
+      }
+      .sixmonth-card{
+        margin-top: 30px;
+        height: 183px;
+        width: 100%;
+        background-image: url("/thecup/resources/img/sixmonth-card.svg");
+        background-repeat: no-repeat;
+      }
+      .btn-primary{
+        margin-top: 20px;
+        width: 100%;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        color: #FFFFFF;
+        padding: 14px 44px;
+        border-radius: 8px;
+      }
     }
   }
 }

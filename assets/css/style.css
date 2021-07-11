@@ -6,7 +6,10 @@ html, body {
   font-family: 'Roboto', sans-serif; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: inherit; }
+  a:hover {
+    color: inherit; }
 
 a, button {
   transition: 0.3s; }
@@ -58,7 +61,7 @@ p {
 
 .carousel-holder {
   position: relative;
-  margin-top: 14px;
+  margin-top: 30px;
   height: 420px;
   padding-left: 30px;
   padding-right: 30px;
@@ -165,7 +168,9 @@ p {
       font-size: 16px;
       font-weight: 500;
       color: #22539D;
-      line-height: 18.75px; }
+      line-height: 18.75px;
+      display: inline-flex;
+      align-items: center; }
   .radio-holder .radio-frame {
     margin-top: 22px; }
     .radio-holder .radio-frame .radio-frame-main {
@@ -1968,18 +1973,18 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between; }
-    .post-body .news-holder .news-main .post-holder .post-title .author-date-rating .author {
+    .post-body .news-holder .news-main .post-holder .post-title .author-date-rating .author a {
       display: inline-flex;
       align-items: center; }
-      .post-body .news-holder .news-main .post-holder .post-title .author-date-rating .author .material-icons {
+      .post-body .news-holder .news-main .post-holder .post-title .author-date-rating .author a .material-icons {
         font-size: 20px; }
-      .post-body .news-holder .news-main .post-holder .post-title .author-date-rating .author span {
-        margin-right: 7px;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 140%;
-        color: #767676; }
+    .post-body .news-holder .news-main .post-holder .post-title .author-date-rating .author span {
+      margin-right: 7px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 140%;
+      color: #767676; }
     .post-body .news-holder .news-main .post-holder .post-title .author-date-rating .date {
       display: inline-flex;
       align-items: center; }
@@ -2377,5 +2382,167 @@ p {
       font-size: 15px;
       line-height: 18px;
       color: #767676; }
+
+.my-account-body .contact-holder {
+  margin-top: 60px; }
+  .my-account-body .contact-holder .contact-left .title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: #1B3864; }
+  .my-account-body .contact-holder .contact-left .number {
+    margin-top: 15px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: 0.1em;
+    color: #000000; }
+  .my-account-body .contact-holder .contact-left .mail, .my-account-body .contact-holder .contact-left .addr {
+    margin-top: 15px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    color: #000000; }
+  .my-account-body .contact-holder .contact-left .text {
+    margin-top: 24px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    color: #767676;
+    white-space: pre-line; }
+  .my-account-body .contact-holder .contact-left .phone-text {
+    margin-top: 15px; }
+  .my-account-body .contact-holder .contact-left .email {
+    margin-top: 60px; }
+  .my-account-body .contact-holder .contact-left .address {
+    margin-top: 60px; }
+  .my-account-body .contact-holder .right {
+    width: 54%;
+    padding-right: 60px;
+    border-right: 1px solid #DDDDDD; }
+    .my-account-body .contact-holder .right .title {
+      font-style: normal;
+      font-weight: 900;
+      font-size: 16px;
+      line-height: 140%;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #1B3864; }
+    .my-account-body .contact-holder .right .input-name {
+      margin-top: 20px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 21px;
+      display: flex;
+      align-items: center;
+      color: #2C3E50; }
+    .my-account-body .contact-holder .right .form-floating label {
+      font-size: 14px;
+      opacity: 0.5; }
+    .my-account-body .contact-holder .right .btn-primary {
+      margin-top: 25px;
+      border: none;
+      border-radius: 8px;
+      background-color: #2270E8;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 16px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #FFFFFF;
+      padding: 14px 44px; }
+    .my-account-body .contact-holder .right .upload-avatar {
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin-top: 20px; }
+      .my-account-body .contact-holder .right .upload-avatar .text {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+        color: #333333; }
+      .my-account-body .contact-holder .right .upload-avatar .upload-button {
+        width: 100px;
+        height: 100px;
+        background: #E8EFFA;
+        border: 5px solid #DCEAFF;
+        box-sizing: border-box;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto; }
+      .my-account-body .contact-holder .right .upload-avatar .input {
+        position: absolute;
+        height: 100%;
+        left: 0;
+        outline: 0;
+        opacity: 0;
+        top: 0;
+        width: 100%; }
+    .my-account-body .contact-holder .right .input-group {
+      margin-top: 5px; }
+    .my-account-body .contact-holder .right .form-control {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 21px;
+      color: #B3B3B3; }
+    .my-account-body .contact-holder .right .margin-top {
+      margin-top: 60px; }
+  .my-account-body .contact-holder .left {
+    width: 46%;
+    padding-left: 60px; }
+    .my-account-body .contact-holder .left .text-head {
+      display: flex;
+      justify-content: space-between; }
+      .my-account-body .contact-holder .left .text-head .text {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 16px;
+        line-height: 140%;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        text-align: left;
+        color: #1B3864; }
+      .my-account-body .contact-holder .left .text-head .history {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 150%;
+        color: #2270E8; }
+    .my-account-body .contact-holder .left .trial-card {
+      margin-top: 20px;
+      height: 183px;
+      width: 100%;
+      background-image: url("/thecup/resources/img/trial-card.svg");
+      background-repeat: no-repeat; }
+    .my-account-body .contact-holder .left .sixmonth-card {
+      margin-top: 30px;
+      height: 183px;
+      width: 100%;
+      background-image: url("/thecup/resources/img/sixmonth-card.svg");
+      background-repeat: no-repeat; }
+    .my-account-body .contact-holder .left .btn-primary {
+      margin-top: 20px;
+      width: 100%;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      color: #FFFFFF;
+      padding: 14px 44px;
+      border-radius: 8px; }
 
 /*# sourceMappingURL=style.css.map */

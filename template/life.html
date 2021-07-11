@@ -18,7 +18,7 @@
 <!--Navigator-bar-->
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/thecup/">
             <img class="logo" height="40" src="../resources/img/Logo.svg" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -38,8 +38,7 @@
                         Kinh tế
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Phân nhóm 1</a></li>
-                        <li><a class="dropdown-item" href="#">Phân nhóm 2</a></li>
+                        <li><a class="dropdown-item" href="/thecup/template/economy.html">Trang kinh tế</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -52,8 +51,7 @@
                         Sống
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Phân nhóm 1</a></li>
-                        <li><a class="dropdown-item" href="#">Phân nhóm 2</a></li>
+                        <li><a class="dropdown-item" href="/thecup/template/economy.html">Trang Sống</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -66,7 +64,7 @@
                         Công nghệ
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Phân nhóm 1</a></li>
+                        <li><a class="dropdown-item" href="/thecup/template/economy.html">Trang Sống</a></li>
                         <li><a class="dropdown-item" href="#">Phân nhóm 2</a></li>
                         <li>
                             <hr class="dropdown-divider">
@@ -81,15 +79,19 @@
                     <a class="nav-link" href="#">Thể thao</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="/thecup/template/search.html">
                         <i class="fas fa-search"></i>
                     </a>
-
                 </li>
             </ul>
             <div class="nav-register">
-                <button class="btn btn-light" type="submit">Đăng nhập</button>
-                <button class="btn btn-light ms-1" type="submit">Đăng ký</button>
+                <a href="/thecup/template/login.html" class="">
+                    <button class="btn btn-light" type="submit">Đăng nhập</button>
+                </a>
+                <a href="/thecup/template/register.html" class="">
+                    <button class="btn btn-light ms-1" type="submit">Đăng ký</button>
+                </a>
+
             </div>
         </div>
     </div>
@@ -115,25 +117,31 @@
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="../resources/img/carousel/life-carousel-1.png" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Tôi lựa chọn du lịch thay vì tiết kiệm tiền cực khổ</h5>
-                <p>Ngày 24 tháng 5, 2020</p>
-            </div>
+            <a href="/thecup/template/image_post.html">
+                <img src="../resources/img/carousel/life-carousel-1.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Tôi lựa chọn du lịch thay vì tiết kiệm tiền cực khổ</h5>
+                    <p>Ngày 24 tháng 5, 2020</p>
+                </div>
+            </a>
         </div>
         <div class="carousel-item">
-            <img src="../resources/img/carousel/life-carousel-1.png" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Tôi lựa chọn cực khổ thay vì tiết kiệm tiền đi đi du lịch</h5>
-                <p>Ngày 24 tháng 5, 2020</p>
-            </div>
+            <a href="/thecup/template/image_post.html">
+                <img src="../resources/img/carousel/life-carousel-1.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Tôi lựa chọn cực khổ thay vì tiết kiệm tiền đi đi du lịch</h5>
+                    <p>Ngày 24 tháng 5, 2020</p>
+                </div>
+            </a>
         </div>
         <div class="carousel-item">
-            <img src="../resources/img/carousel/life-carousel-1.png" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Tôi thà tiết kiệm tiền còn hơn đi du lịch</h5>
-                <p>Ngày 24 tháng 5, 2020</p>
-            </div>
+            <a href="/thecup/template/image_post.html">
+                <img src="../resources/img/carousel/life-carousel-1.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Tôi thà tiết kiệm tiền còn hơn đi du lịch</h5>
+                    <p>Ngày 24 tháng 5, 2020</p>
+                </div>
+            </a>
         </div>
     </div>
 </div>
@@ -159,26 +167,28 @@
             <div class="news-main col-md-8">
                 <div class="news-other-post">
                     <div class="other-post">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img src="../resources/img/other%20post/another-post-1.png" alt="">
-                            </div>
-                            <div class="col-md-8">
-                                <p class="other-post-title">Phân tích tác phẩm tiếng thét? Sự thật đằng sau nó còn đáng
-                                    giá
-                                    hơn rất nhiều</p>
-                                <div class="other-post-information">
-                                    <span class="other-post-date-info">Ngày 21 tháng 5, 2020</span>
-                                    <div class="info-seperator"></div>
-                                    <span class="other-post-comment-info">3 bình luận</span>
+                        <a href="/thecup/template/covid_post.html">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="../resources/img/other%20post/another-post-1.png" alt="">
                                 </div>
-                                <p class="other-post-description">Giao dịch khối ngoại là điểm trừ khi họ tiếp tục bán
-                                    ròng
-                                    khá mạnh với giá trị hơn 1.500 tỷ đồng trên toàn thị trường. Lực bán của khối ngoại
-                                    tập
-                                    trung vào các ...</p>
+                                <div class="col-md-8">
+                                    <p class="other-post-title">Phân tích tác phẩm tiếng thét? Sự thật đằng sau nó còn đáng
+                                        giá
+                                        hơn rất nhiều</p>
+                                    <div class="other-post-information">
+                                        <span class="other-post-date-info">Ngày 21 tháng 5, 2020</span>
+                                        <div class="info-seperator"></div>
+                                        <span class="other-post-comment-info">3 bình luận</span>
+                                    </div>
+                                    <p class="other-post-description">Giao dịch khối ngoại là điểm trừ khi họ tiếp tục bán
+                                        ròng
+                                        khá mạnh với giá trị hơn 1.500 tỷ đồng trên toàn thị trường. Lực bán của khối ngoại
+                                        tập
+                                        trung vào các ...</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="other-post">
                         <div class="row">
