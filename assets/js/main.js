@@ -18,10 +18,45 @@ $(document).ready(function(){
             }
         }
     })
+    //Carousel
     $('.btn-carousel-prev').click(function() {
         $(".carousel-holder .owl-carousel .owl-prev").trigger('click');
     });
     $('.btn-carousel-next').click(function() {
         $(".carousel-holder .owl-carousel .owl-next").trigger('click');
     });
+
+    //Change play button to pause and revert back
+    // $('#playBtn').click(function(){
+    //     if($(this).find('span').text().trim() == 'play_arrow'){
+    //         $(this).find('span').text('pause');
+    //         $(this).attr('id','pauseBtn');
+    //     } else {
+    //         $(this).find('span').text('play_arrow');
+    //         $(this).attr('id','playBtn');
+    //     }
+    // });
+    var sound1 = new Howl({
+        src: ['../song.mp3']
+    });
+    // playBtn.addEventListener('click', function() {
+    //     console.log("PLAY CALLED!")
+    //     //sound1.play();
+    // });
+    $(document).on('click', '#playBtn', function() {
+        console.log("PLAY CALLED!");
+        $('#playBtn').find('span').text('pause');
+        $('#playBtn').attr('id','pauseBtn');
+        sound1.play();
+    });
+    $(document).on('click', '#pauseBtn', function() {
+        console.log("PAUSE CALLED!");
+        $('#pauseBtn').find('span').text('play_arrow');
+        $('#pauseBtn').attr('id','playBtn');
+        sound1.pause();
+    });
 });
+
+// Sound player
+
+

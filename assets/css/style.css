@@ -1575,7 +1575,8 @@ p {
         border: 2px solid white;
         display: inline-flex;
         align-items: center;
-        justify-content: center; }
+        justify-content: center;
+        background-color: transparent; }
         .podcast-single-body .podcast-player-holder .lower .button-holder .play-button span {
           font-size: 23px; }
     .podcast-single-body .podcast-player-holder .lower .progress-holder {
