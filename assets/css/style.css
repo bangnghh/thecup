@@ -1261,6 +1261,8 @@ p {
         height: 3px;
         margin-left: 20px;
         margin-right: 20px; }
+      .podcast-episodes-body .podcast-player-holder .lower .progress-holder .progress-bar {
+        transition: width 0.1s ease; }
 .podcast-episodes-body .footer-holder {
   margin-top: 0; }
 
@@ -1579,6 +1581,11 @@ p {
         background-color: transparent; }
         .podcast-single-body .podcast-player-holder .lower .button-holder .play-button span {
           font-size: 23px; }
+      .podcast-single-body .podcast-player-holder .lower .button-holder button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent; }
     .podcast-single-body .podcast-player-holder .lower .progress-holder {
       display: inline-flex;
       align-items: center; }
@@ -1594,6 +1601,8 @@ p {
         height: 3px;
         margin-left: 20px;
         margin-right: 20px; }
+      .podcast-single-body .podcast-player-holder .lower .progress-holder .progress-bar {
+        transition: width 0.1s ease; }
 .podcast-single-body .footer-holder {
   margin-top: 0; }
 

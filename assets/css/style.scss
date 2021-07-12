@@ -1580,6 +1580,9 @@ p{
           margin-left: 20px;
           margin-right: 20px;
         }
+        .progress-bar{
+          transition: width 0.1s ease;
+        }
       }
     }
   }
@@ -1978,6 +1981,12 @@ p{
             font-size: 23px;
           }
         }
+        button{
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          background-color: transparent;
+        }
       }
       .progress-holder{
         display: inline-flex;
@@ -1995,6 +2004,9 @@ p{
           height: 3px;
           margin-left: 20px;
           margin-right: 20px;
+        }
+        .progress-bar{
+          transition: width 0.1s ease;
         }
       }
     }

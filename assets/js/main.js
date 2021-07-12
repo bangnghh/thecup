@@ -37,24 +37,10 @@ $(document).ready(function(){
     //     }
     // });
     var sound1 = new Howl({
-        src: ['../song.mp3']
+        src: ['../surrender.mp3'],
+        html5: true,
     });
-    // playBtn.addEventListener('click', function() {
-    //     console.log("PLAY CALLED!")
-    //     //sound1.play();
-    // });
-    $(document).on('click', '#playBtn', function() {
-        console.log("PLAY CALLED!");
-        $('#playBtn').find('span').text('pause');
-        $('#playBtn').attr('id','pauseBtn');
-        sound1.play();
-    });
-    $(document).on('click', '#pauseBtn', function() {
-        console.log("PAUSE CALLED!");
-        $('#pauseBtn').find('span').text('play_arrow');
-        $('#pauseBtn').attr('id','playBtn');
-        sound1.pause();
-    });
+
 });
 
 // Sound player
