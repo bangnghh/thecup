@@ -1987,6 +1987,23 @@ p{
           justify-content: center;
           background-color: transparent;
         }
+        .play-speed{
+          font-size: 16px;
+          font-weight: bold;
+        }
+        .volume-holder{
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+
+          .progress{
+            display: inline-flex;
+            width: 60px;
+            height: 5px;
+            margin-left: 4px;
+            cursor: pointer;
+          }
+        }
       }
       .progress-holder{
         display: inline-flex;

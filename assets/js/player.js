@@ -48,6 +48,7 @@ Player.prototype = {
                 //src: ['./audio/' + data.file + '.webm', './audio/' + data.file + '.mp3'],
                 src: ['./audio/' + data.file + '.mp3'],
                 html5: true, // Force to HTML5 so that the audio can stream in (best for large files).
+                volume: 0.1,
                 onplay: function() {
                     // Display the duration.
                     duration.innerHTML = self.formatTime(Math.round(sound.duration()));
@@ -57,30 +58,30 @@ Player.prototype = {
 
                     // Start the wave animation if we have already loaded
                     //wave.container.style.display = 'block';
-                    bar.style.display = 'none';
+                    //bar.style.display = 'none';
                     pauseBtn.style.display = 'inline-flex';
                 },
                 onload: function() {
                     // Start the wave animation.
                     //wave.container.style.display = 'block';
-                    bar.style.display = 'none';
-                    loading.style.display = 'none';
+                    //bar.style.display = 'none';
+                    //loading.style.display = 'none';
                 },
                 onend: function() {
                     // Stop the wave animation.
                     //wave.container.style.display = 'none';
-                    bar.style.display = 'block';
+                    //bar.style.display = 'block';
                     self.skip('next');
                 },
                 onpause: function() {
                     // Stop the wave animation.
                     //wave.container.style.display = 'none';
-                    bar.style.display = 'block';
+                    //bar.style.display = 'block';
                 },
                 onstop: function() {
                     // Stop the wave animation.
                     //wave.container.style.display = 'none';
-                    bar.style.display = 'block';
+                    //bar.style.display = 'block';
                 },
                 onseek: function() {
                     // Start updating the progress of the track.
@@ -90,20 +91,11 @@ Player.prototype = {
         }
 
         // Begin playing the sound.
+        console.log(sound.volume());
         sound.play();
 
         // Update the track display.
         track.innerHTML = 'Phần '+ (index + 1) + ' : ' + data.title;
-
-        // Show the pause button.
-        // if (sound.state() === 'loaded') {
-        //     playBtn.style.display = 'none';
-        //     pauseBtn.style.display = 'block';
-        // } else {
-        //     loading.style.display = 'block';
-        //     playBtn.style.display = 'none';
-        //     pauseBtn.style.display = 'none';
-        // }
 
         // Keep track of the index we are currently playing.
         self.index = index;
@@ -180,9 +172,10 @@ Player.prototype = {
         Howler.volume(val);
 
         // Update the display on the slider.
-        var barWidth = (val * 90) / 100;
-        barFull.style.width = (barWidth * 100) + '%';
-        sliderBtn.style.left = (window.innerWidth * barWidth + window.innerWidth * 0.05 - 25) + 'px';
+        volProgress.style.width = val * 100 + '%'
+        //var barWidth = (val * 90) / 100;
+        //barFull.style.width = (barWidth * 100) + '%';
+        //sliderBtn.style.left = (window.innerWidth * barWidth + window.innerWidth * 0.05 - 25) + 'px';
     },
 
     /**
@@ -196,9 +189,8 @@ Player.prototype = {
         var sound = self.playlist[self.index].howl;
 
         // Convert the percent into a seek position.
-        if (sound.playing()) {
-            sound.seek(sound.duration() * per);
-        }
+        sound.seek(sound.duration() * per);
+
     },
 
     seekForward10: function (){
@@ -207,14 +199,13 @@ Player.prototype = {
         var currentSeek = sound.seek();
         var soundDuration = sound.duration();
 
-        if(sound.playing()){
-            sound.seek(currentSeek + 10);
-            console.log(currentSeek);
-            if (currentSeek >= soundDuration){
-                console.log("Jump to next");
-                this.skip('next');
-            }
+        sound.seek(currentSeek + 10);
+        console.log(currentSeek);
+        if (currentSeek >= soundDuration){
+            console.log("Jump to next");
+            this.skip('next');
         }
+
     },
     seekBackward10: function (){
         var self = this;
@@ -222,13 +213,12 @@ Player.prototype = {
         var currentSeek = sound.seek();
         //var soundDuration = sound.duration();
 
-        if(sound.playing()){
-            sound.seek(currentSeek - 10);
-            console.log(currentSeek);
-            if (currentSeek <= 10){
-                sound.seek(0);
-            }
+        sound.seek(currentSeek - 10);
+        console.log(currentSeek);
+        if (currentSeek <= 10){
+            sound.seek(0);
         }
+
     },
 
     /**
@@ -262,19 +252,6 @@ Player.prototype = {
             playlist.style.display = display;
         }, (display === 'block') ? 0 : 500);
         playlist.className = (display === 'block') ? 'fadein' : 'fadeout';
-    },
-
-    /**
-     * Toggle the volume display on/off.
-     */
-    toggleVolume: function() {
-        var self = this;
-        var display = (volume.style.display === 'block') ? 'none' : 'block';
-
-        setTimeout(function() {
-            volume.style.display = display;
-        }, (display === 'block') ? 0 : 500);
-        volume.className = (display === 'block') ? 'fadein' : 'fadeout';
     },
 
     /**
@@ -326,10 +303,15 @@ nextBtn.addEventListener('click', function() {
     $('#playBtn').find('span').text('pause');
     $('#playBtn').attr('id','pauseBtn');
 });
-progressWrapper.addEventListener('click', function(event) {
+durationProgressWrapper.addEventListener('click', function(event) {
     //console.log(event.offsetX);
     //console.log(progressWrapper.offsetWidth);
-    player.seek(event.offsetX / progressWrapper.offsetWidth);
+    player.seek(event.offsetX / durationProgressWrapper.offsetWidth);
+});
+volumeProgressWrapper.addEventListener('click', function(event) {
+    console.log("Volume value: "+ event.offsetX / volumeProgressWrapper.offsetWidth);
+    //console.log(progressWrapper.offsetWidth);
+    player.volume(event.offsetX / volumeProgressWrapper.offsetWidth);
 });
 forward10s.addEventListener('click', function () {
     player.seekForward10();
@@ -368,15 +350,15 @@ replay10s.addEventListener('click', function () {
 //     window.sliderDown = false;
 // });
 
-var move = function(event) {
-    if (window.sliderDown) {
-        var x = event.clientX || event.touches[0].clientX;
-        var startX = window.innerWidth * 0.05;
-        var layerX = x - startX;
-        var per = Math.min(1, Math.max(0, layerX / parseFloat(barEmpty.scrollWidth)));
-        player.volume(per);
-    }
-};
+// var move = function(event) {
+//     if (window.sliderDown) {
+//         var x = event.clientX || event.touches[0].clientX;
+//         var startX = window.innerWidth * 0.05;
+//         var layerX = x - startX;
+//         var per = Math.min(1, Math.max(0, layerX / parseFloat(barEmpty.scrollWidth)));
+//         player.volume(per);
+//     }
+// };
 
 // volume.addEventListener('mousemove', move);
 // volume.addEventListener('touchmove', move);

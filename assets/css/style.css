@@ -1586,6 +1586,19 @@ p {
         align-items: center;
         justify-content: center;
         background-color: transparent; }
+      .podcast-single-body .podcast-player-holder .lower .button-holder .play-speed {
+        font-size: 16px;
+        font-weight: bold; }
+      .podcast-single-body .podcast-player-holder .lower .button-holder .volume-holder {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center; }
+        .podcast-single-body .podcast-player-holder .lower .button-holder .volume-holder .progress {
+          display: inline-flex;
+          width: 60px;
+          height: 5px;
+          margin-left: 4px;
+          cursor: pointer; }
     .podcast-single-body .podcast-player-holder .lower .progress-holder {
       display: inline-flex;
       align-items: center; }
