@@ -2411,166 +2411,251 @@ p {
       line-height: 18px;
       color: #767676; }
 
-.my-account-body .contact-holder {
-  margin-top: 60px; }
-  .my-account-body .contact-holder .contact-left .title {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 140%;
-    color: #1B3864; }
-  .my-account-body .contact-holder .contact-left .number {
-    margin-top: 15px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 140%;
-    letter-spacing: 0.1em;
-    color: #000000; }
-  .my-account-body .contact-holder .contact-left .mail, .my-account-body .contact-holder .contact-left .addr {
-    margin-top: 15px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 140%;
-    color: #000000; }
-  .my-account-body .contact-holder .contact-left .text {
-    margin-top: 24px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 140%;
-    color: #767676;
-    white-space: pre-line; }
-  .my-account-body .contact-holder .contact-left .phone-text {
-    margin-top: 15px; }
-  .my-account-body .contact-holder .contact-left .email {
+.my-account-body {
+  position: relative; }
+  .my-account-body .popup-purchase {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 14;
+    visibility: hidden;
+    display: flex;
+    justify-content: center; }
+    .my-account-body .popup-purchase .holder {
+      margin-top: 200px;
+      width: 941px;
+      height: 657px;
+      background-color: white; }
+  .my-account-body .contact-holder {
     margin-top: 60px; }
-  .my-account-body .contact-holder .contact-left .address {
-    margin-top: 60px; }
-  .my-account-body .contact-holder .right {
-    width: 54%;
-    padding-right: 60px;
-    border-right: 1px solid #DDDDDD; }
-    .my-account-body .contact-holder .right .title {
+    .my-account-body .contact-holder .contact-left .title {
       font-style: normal;
-      font-weight: 900;
+      font-weight: 500;
       font-size: 16px;
       line-height: 140%;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
       color: #1B3864; }
-    .my-account-body .contact-holder .right .input-name {
-      margin-top: 20px;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 21px;
-      display: flex;
-      align-items: center;
-      color: #2C3E50; }
-    .my-account-body .contact-holder .right .form-floating label {
-      font-size: 14px;
-      opacity: 0.5; }
-    .my-account-body .contact-holder .right .btn-primary {
-      margin-top: 25px;
-      border: none;
-      border-radius: 8px;
-      background-color: #2270E8;
+    .my-account-body .contact-holder .contact-left .number {
+      margin-top: 15px;
       font-style: normal;
       font-weight: bold;
-      font-size: 14px;
-      line-height: 16px;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      color: #FFFFFF;
-      padding: 14px 44px; }
-    .my-account-body .contact-holder .right .upload-avatar {
-      display: flex;
-      align-items: center;
-      position: relative;
-      margin-top: 20px; }
-      .my-account-body .contact-holder .right .upload-avatar .text {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 19px;
-        display: flex;
-        align-items: center;
-        color: #333333; }
-      .my-account-body .contact-holder .right .upload-avatar .upload-button {
-        width: 100px;
-        height: 100px;
-        background: #E8EFFA;
-        border: 5px solid #DCEAFF;
-        box-sizing: border-box;
-        border-radius: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto; }
-      .my-account-body .contact-holder .right .upload-avatar .input {
-        position: absolute;
-        height: 100%;
-        left: 0;
-        outline: 0;
-        opacity: 0;
-        top: 0;
-        width: 100%; }
-    .my-account-body .contact-holder .right .input-group {
-      margin-top: 5px; }
-    .my-account-body .contact-holder .right .form-control {
+      font-size: 24px;
+      line-height: 140%;
+      letter-spacing: 0.1em;
+      color: #000000; }
+    .my-account-body .contact-holder .contact-left .mail, .my-account-body .contact-holder .contact-left .addr {
+      margin-top: 15px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 140%;
+      color: #000000; }
+    .my-account-body .contact-holder .contact-left .text {
+      margin-top: 24px;
       font-style: normal;
       font-weight: normal;
-      font-size: 14px;
-      line-height: 21px;
-      color: #B3B3B3; }
-    .my-account-body .contact-holder .right .margin-top {
+      font-size: 16px;
+      line-height: 140%;
+      color: #767676;
+      white-space: pre-line; }
+    .my-account-body .contact-holder .contact-left .phone-text {
+      margin-top: 15px; }
+    .my-account-body .contact-holder .contact-left .email {
       margin-top: 60px; }
-  .my-account-body .contact-holder .left {
-    width: 46%;
-    padding-left: 60px; }
-    .my-account-body .contact-holder .left .text-head {
-      display: flex;
-      justify-content: space-between; }
-      .my-account-body .contact-holder .left .text-head .text {
+    .my-account-body .contact-holder .contact-left .address {
+      margin-top: 60px; }
+    .my-account-body .contact-holder .right {
+      width: 54%;
+      padding-right: 60px;
+      border-right: 1px solid #DDDDDD; }
+      .my-account-body .contact-holder .right .title {
         font-style: normal;
         font-weight: 900;
         font-size: 16px;
         line-height: 140%;
         letter-spacing: 0.05em;
         text-transform: uppercase;
-        text-align: left;
         color: #1B3864; }
-      .my-account-body .contact-holder .left .text-head .history {
+      .my-account-body .contact-holder .right .input-name {
+        margin-top: 20px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        color: #2C3E50; }
+      .my-account-body .contact-holder .right .form-floating label {
+        font-size: 14px;
+        opacity: 0.5; }
+      .my-account-body .contact-holder .right .btn-primary {
+        margin-top: 25px;
+        border: none;
+        border-radius: 8px;
+        background-color: #2270E8;
         font-style: normal;
         font-weight: bold;
         font-size: 14px;
-        line-height: 150%;
-        color: #2270E8; }
-    .my-account-body .contact-holder .left .trial-card {
-      margin-top: 20px;
-      height: 183px;
-      width: 100%;
-      background-image: url("/thecup/resources/img/trial-card.svg");
-      background-repeat: no-repeat; }
-    .my-account-body .contact-holder .left .sixmonth-card {
-      margin-top: 30px;
-      height: 183px;
-      width: 100%;
-      background-image: url("/thecup/resources/img/sixmonth-card.svg");
-      background-repeat: no-repeat; }
-    .my-account-body .contact-holder .left .btn-primary {
-      margin-top: 20px;
-      width: 100%;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 14px;
-      line-height: 16px;
-      text-align: center;
-      color: #FFFFFF;
-      padding: 14px 44px;
-      border-radius: 8px; }
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+        padding: 14px 44px; }
+      .my-account-body .contact-holder .right .upload-avatar {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-top: 20px; }
+        .my-account-body .contact-holder .right .upload-avatar .text {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 19px;
+          display: flex;
+          align-items: center;
+          color: #333333; }
+        .my-account-body .contact-holder .right .upload-avatar .upload-button {
+          width: 100px;
+          height: 100px;
+          background: #E8EFFA;
+          border: 5px solid #DCEAFF;
+          box-sizing: border-box;
+          border-radius: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto; }
+        .my-account-body .contact-holder .right .upload-avatar .input {
+          position: absolute;
+          height: 100%;
+          left: 0;
+          outline: 0;
+          opacity: 0;
+          top: 0;
+          width: 100%; }
+      .my-account-body .contact-holder .right .input-group {
+        margin-top: 5px; }
+      .my-account-body .contact-holder .right .form-control {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 21px;
+        color: #B3B3B3; }
+      .my-account-body .contact-holder .right .margin-top {
+        margin-top: 60px; }
+    .my-account-body .contact-holder .left {
+      width: 46%;
+      padding-left: 60px; }
+      .my-account-body .contact-holder .left .text-head {
+        display: flex;
+        justify-content: space-between; }
+        .my-account-body .contact-holder .left .text-head .text {
+          font-style: normal;
+          font-weight: 900;
+          font-size: 16px;
+          line-height: 140%;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          text-align: left;
+          color: #1B3864; }
+        .my-account-body .contact-holder .left .text-head .btn {
+          padding: 0; }
+        .my-account-body .contact-holder .left .text-head .history {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 150%;
+          color: #2270E8; }
+      .my-account-body .contact-holder .left .trial-card {
+        margin-top: 20px;
+        height: 183px;
+        width: 100%;
+        background-image: url("/thecup/resources/img/trial-card.svg");
+        background-repeat: no-repeat; }
+      .my-account-body .contact-holder .left .sixmonth-card {
+        margin-top: 30px;
+        height: 183px;
+        width: 100%;
+        background-image: url("/thecup/resources/img/sixmonth-card.svg");
+        background-repeat: no-repeat; }
+      .my-account-body .contact-holder .left .btn-primary {
+        margin-top: 20px;
+        width: 100%;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        color: #FFFFFF;
+        padding: 14px 44px;
+        border-radius: 8px; }
+
+.post-body {
+  position: relative; }
+  .post-body .restrict-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    z-index: 10; }
+  .post-body .restrict-layer-text {
+    background-color: white;
+    width: 100%;
+    height: 398px;
+    opacity: 1;
+    z-index: 11;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .post-body .restrict-layer-text .wrapper {
+      text-align: center; }
+      .post-body .restrict-layer-text .wrapper .text1 {
+        margin-bottom: 22px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 140%;
+        /* identical to box height, or 34px */
+        /* Neutral/200 */
+        color: #333333; }
+      .post-body .restrict-layer-text .wrapper .text2 {
+        margin-bottom: 40px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 140%;
+        /* or 25px */
+        /* Neutral/200 */
+        color: #333333; }
+      .post-body .restrict-layer-text .wrapper .button-holder .button-reg {
+        background-color: #2270E8;
+        border-radius: 32px;
+        padding: 16px 24px;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        color: #FFFFFF; }
+      .post-body .restrict-layer-text .wrapper .button-holder span {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: #B3B3B3;
+        margin: 0px 8px; }
+      .post-body .restrict-layer-text .wrapper .button-holder .button-log {
+        background-color: transparent;
+        font-weight: bold;
+        border-radius: 32px;
+        font-size: 18px;
+        line-height: 21px;
+        color: #2270E8;
+        padding: 16px 24px; }
 
 /*# sourceMappingURL=style.css.map */

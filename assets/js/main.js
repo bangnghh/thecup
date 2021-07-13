@@ -36,11 +36,11 @@ $(document).ready(function(){
     //         $(this).attr('id','playBtn');
     //     }
     // });
-    var sound1 = new Howl({
-        src: ['../surrender.mp3'],
-        html5: true,
+    $(document).on('click', '#purchaseHistory', function() {
+        console.log("History Clicked!");
+        popupPurchase.style.visibility = 'visible';
+        //progress.style.width = "50%";
     });
-
 });
 
 // Sound player
