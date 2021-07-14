@@ -2658,4 +2658,76 @@ p {
         color: #2270E8;
         padding: 16px 24px; }
 
+.purchase-body .purchase-holder {
+  margin-top: 73px; }
+  .purchase-body .purchase-holder .row {
+    height: 373px; }
+  .purchase-body .purchase-holder .package-box {
+    width: 100%;
+    height: 373px;
+    border: 1px solid #DDDDDD;
+    box-sizing: border-box;
+    border-radius: 16px;
+    text-align: center;
+    transition: 0.2s ease; }
+    .purchase-body .purchase-holder .package-box:hover {
+      height: 411px;
+      transform: translateY(-20px);
+      transition: 0.2s ease; }
+    .purchase-body .purchase-holder .package-box .package-title {
+      margin-top: 38px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      color: #333333; }
+    .purchase-body .purchase-holder .package-box .pricing {
+      margin-top: 14px;
+      margin-bottom: 40px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 28px;
+      color: #2270E8; }
+    .purchase-body .purchase-holder .package-box .package-info {
+      margin-top: 16px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 18px;
+      color: #333333; }
+    .purchase-body .purchase-holder .package-box .select-package {
+      margin-top: 110px;
+      border: 1px solid #2270E8;
+      box-sizing: border-box;
+      border-radius: 8px;
+      padding: 14px 35px;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      color: #2270E8; }
+    .purchase-body .purchase-holder .package-box .button-orange {
+      border: 1px solid #FF8C26;
+      background-color: white;
+      color: #FF8C26; }
+    .purchase-body .purchase-holder .package-box .button-blue {
+      border: 1px solid #2270E8;
+      background-color: white;
+      color: #2270E8; }
+  .purchase-body .purchase-holder .orange-box {
+    border: 1px solid #FF8C26;
+    background-color: #FF8C26; }
+  .purchase-body .purchase-holder .blue-box {
+    border: 1px solid #2270E8;
+    background-color: #2270E8; }
+  .purchase-body .purchase-holder .contact {
+    margin-top: 48px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #333333; }
+
 /*# sourceMappingURL=style.css.map */
