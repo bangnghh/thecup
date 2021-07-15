@@ -21,6 +21,54 @@ p {
   padding-right: 0 !important;
   padding-left: 0 !important; }
 
+.homepage-body {
+  position: relative; }
+
+.register-body, .login-body {
+  transition: 0.2s ease;
+  position: absolute;
+  width: 100%;
+  height: 1080px;
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  z-index: 10; }
+
+.search-popup-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 960px;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 12;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s ease; }
+  .search-popup-body .search-popup-holder {
+    width: 50%;
+    height: 200px; }
+    .search-popup-body .search-popup-holder .input-group {
+      display: inline-flex;
+      width: 85%;
+      height: 70px; }
+      .search-popup-body .search-popup-holder .input-group input {
+        border-radius: 40px;
+        font-size: 22px;
+        padding-left: 40px; }
+    .search-popup-body .search-popup-holder button {
+      display: inline-flex;
+      font-size: 39px;
+      margin-left: 24px;
+      color: #767676;
+      letter-spacing: 1px; }
+      .search-popup-body .search-popup-holder button i {
+        color: white; }
+
 .navbar {
   background-color: #1B3864;
   height: 62px; }
@@ -34,21 +82,24 @@ p {
     .navbar .nav-item .fa-search {
       color: white !important;
       font-size: 14px; }
-  .navbar .navbar-nav .dropdown-menu {
-    transition: all 0.3s ease;
-    opacity: 0;
-    visibility: hidden;
-    display: block;
-    height: 0;
-    padding: 0; }
-    .navbar .navbar-nav .dropdown-menu .dropdown-item {
-      font-weight: 600; }
-  .navbar .navbar-nav .dropdown-menu.show {
-    transition: all 0.3s ease;
-    visibility: visible;
-    opacity: 1;
-    height: auto;
-    padding: auto; }
+  .navbar .navbar-nav {
+    display: flex;
+    align-items: center; }
+    .navbar .navbar-nav .dropdown-menu {
+      transition: all 0.3s ease;
+      opacity: 0;
+      visibility: hidden;
+      display: block;
+      height: 0;
+      padding: 0; }
+      .navbar .navbar-nav .dropdown-menu .dropdown-item {
+        font-weight: 600; }
+    .navbar .navbar-nav .dropdown-menu.show {
+      transition: all 0.3s ease;
+      visibility: visible;
+      opacity: 1;
+      height: auto;
+      padding: auto; }
   .navbar .btn-light {
     border-radius: 16px;
     color: #1B3864;
@@ -230,7 +281,7 @@ p {
       align-items: center;
       margin-left: 5px; }
   .radio-holder .btn-radio-next {
-    isplay: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
@@ -479,11 +530,16 @@ p {
       line-height: 19.6px;
       font-weight: 500;
       color: #767676;
-      margin-right: 30px; }
+      margin-right: 20px; }
     .footer-holder .footer-lower .social-connect .social-connect-icon {
-      display: inline-block;
-      margin-left: 11px;
-      color: #22539D;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 10px;
+      background-color: #E8EFFA;
+      width: 32px;
+      height: 32px;
+      border-radius: 17px;
       font-size: 14px; }
   .footer-holder .footer-lower .divider {
     margin-top: 20px;
@@ -2238,8 +2294,7 @@ p {
 
 .register-body, .login-body {
   background-color: #E8EFFA;
-  position: relative;
-  padding-top: 144px; }
+  padding-top: 134px; }
   .register-body .logo-thecup, .login-body .logo-thecup {
     display: block;
     width: 198px;
