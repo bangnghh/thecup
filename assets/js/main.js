@@ -63,13 +63,16 @@ $(document).ready(function(){
         registerBody.style.opacity= '0';
         //progress.style.width = "50%";
     });
+
     $(document).on('click', '#searchBtn', function() {
         searchPopupBody.style.visibility = 'visible';
         searchPopupBody.style.opacity= '1';
+        homePageBody.style.overflow = "hidden";
     });
     $(document).on('click', '#searchPopupBody', function() {
         searchPopupBody.style.visibility = 'hidden';
         searchPopupBody.style.opacity= '0';
+        homePageBody.style.overflow = "visible";
     });
 });
 
