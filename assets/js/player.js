@@ -16,16 +16,6 @@ var Player = function(playlist) {
     // Display the title of the first track.
     track.innerHTML = 'Phần ' +this.index+1+ ' : ' +playlist[0].title;
 
-    // Setup the playlist display.
-    // playlist.forEach(function(song) {
-    //     var div = document.createElement('div');
-    //     div.className = 'list-song';
-    //     div.innerHTML = song.title;
-    //     div.onclick = function() {
-    //         player.skipTo(playlist.indexOf(song));
-    //     };
-    //     list.appendChild(div);
-    // });
 };
 Player.prototype = {
     /**
@@ -59,7 +49,6 @@ Player.prototype = {
                     // Start the wave animation if we have already loaded
                     //wave.container.style.display = 'block';
                     //bar.style.display = 'none';
-                    pauseBtn.style.display = 'inline-flex';
                 },
                 onload: function() {
                     // Start the wave animation.
@@ -115,7 +104,6 @@ Player.prototype = {
 
         // Show the play button.
         playBtn.style.display = 'inline-flex';
-        //pauseBtn.style.display = 'none';
     },
 
     /**
@@ -155,7 +143,7 @@ Player.prototype = {
         }
 
         // Reset progress.
-        progress.style.width = '0%';
+        progress.value = '0';
 
         // Play the new track.
         self.play(index);
@@ -189,10 +177,10 @@ Player.prototype = {
         var sound = self.playlist[self.index].howl;
 
         // Convert the percent into a seek position.
-        sound.seek(sound.duration() * per);
-
+        if (sound.playing()) {
+            sound.seek(sound.duration() * per);
+        }
     },
-
     seekForward10: function (){
         var self = this;
         var sound = self.playlist[self.index].howl;
@@ -233,7 +221,7 @@ Player.prototype = {
         // Determine our current seek position.
         var seek = sound.seek() || 0;
         timer.innerHTML = self.formatTime(Math.round(seek));
-        progress.style.width = (((seek / sound.duration()) * 100) || 0) + '%';
+        progress.value = (((seek / sound.duration()) * 100) || 0);
 
         // If the sound is still playing, continue stepping.
         if (sound.playing()) {
@@ -286,13 +274,6 @@ var player = new Player([
     }
 ]);
 
-// Bind our player controls.
-// playBtn.addEventListener('click', function() {
-//     player.play();
-// });
-// pauseBtn.addEventListener('click', function() {
-//     player.pause();
-// });
 prevBtn.addEventListener('click', function() {
     player.skip('prev');
     $('#playBtn').find('span').text('pause');
@@ -303,8 +284,14 @@ nextBtn.addEventListener('click', function() {
     $('#playBtn').find('span').text('pause');
     $('#playBtn').attr('id','pauseBtn');
 });
-durationProgressWrapper.addEventListener('click', function(event) {
-    //console.log(event.offsetX);
+progress.addEventListener('change', function(event) {
+    //console.log(progress.value);
+    //console.log(progressWrapper.offsetWidth);
+    //player.seek(event.offsetX / durationProgressWrapper.offsetWidth);
+    player.seek(progress.value / 100);
+});
+progress.addEventListener('click', function(event) {
+    //console.log(progress.value);
     //console.log(progressWrapper.offsetWidth);
     player.seek(event.offsetX / durationProgressWrapper.offsetWidth);
 });
@@ -412,8 +399,8 @@ replay10s.addEventListener('click', function () {
         $('#pauseBtn').attr('id','playBtn');
         player.pause();
     });
-    $(document).on('click', '#progress', function() {
-        console.log("Progress Clicked!");
-        //progress.style.width = "50%";
-    });
+    // $(document).on('click', '#progress', function() {
+    //     console.log("Progress Clicked!");
+    //     //progress.style.width = "50%";
+    // });
 });

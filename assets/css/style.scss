@@ -232,15 +232,12 @@ p{
   }
 }
 .radio-holder{
-  position: relative;
   margin-top: 60px;
-  width: 50%;
   height: 270px;
   margin-left: auto;
   margin-right: auto;
-
   .radio-title-frame{
-    width: 90%;
+    width: 852px;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -261,10 +258,13 @@ p{
   }
   .radio-frame{
     margin-top: 22px;
+    position: relative;
+    height: 200px;
     .radio-frame-main{
+
       position: absolute;
       z-index: 3;
-      width: 90%;
+      width: 852px;
       height: 178px;
       overflow: hidden;
       margin-left: auto;
@@ -272,14 +272,110 @@ p{
       left: 0;
       right: 0;
       display: block;
-      background-image: url("/thecup/resources/img/radio-frame.png");
-      background-size: cover;
+      background-color: #F0F0F0;
+      .radio-img{
+        display: inline-block;
+        width: 23%;
+        img{
+          height: 100%;
+        }
+      }
+      .radio-controller{
+        padding: 25px 20px 20px 5px;
+        width: 77%;
+        display: inline-block;
+        height: 100%;
+        .title{
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 140%;
+          color: #333333;
+        }
+        .author{
+          margin-top: 7px;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 140%;
+          color: #22539D;
+        }
+        .button-holder{
+          margin-top: 25px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .play-button{
+            border: 1px solid #333333;
+            box-sizing: border-box;
+            width: 58px;
+            height: 58px;
+            border-radius: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .btn{
+            padding: 0;
+            display: inline-flex;
+            align-items: center;
+          }
+          .prog{
+            width: 58%;
+            height: 10px;
+            align-items: center;
+            display: inline-flex;
+            cursor: pointer;
+            //background: white;
+            .slider {
+              -webkit-appearance: none;
+              width: 100%;
+              height: 1px;
+              border-radius: 5px;
+              background: #000000;
+              outline: none;
+              opacity: 1;
+              cursor: pointer;
+              //-webkit-transition: .2s;
+              //transition: opacity .2s;
+            }
+            .slider::-webkit-slider-thumb {
+              -webkit-appearance: none;
+              appearance: none;
+              width: 15px;
+              height: 15px;
+              border-radius: 50%;
+              background: #1B3864;
+              cursor: pointer;
+            }
+            .slider::-moz-range-thumb {
+              width: 25px;
+              height: 25px;
+              border-radius: 50%;
+              background: #04AA6D;
+              cursor: pointer;
+            }
+          }
+
+          .timer-holder{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 140%;
+            color: #000000;
+          }
+          .volume-holder{
+            display: inline-flex;
+            align-items: center;
+          }
+        }
+      }
     }
     .radio-frame-behind1{
       position: absolute;
       z-index: 2;
       display: block;
-      width: 92.5%;
+      width: 876px;
       height: 178px;
       margin-left: auto;
       margin-right: auto;
@@ -293,7 +389,7 @@ p{
       position: absolute;
       z-index: 1;
       display: block;
-      width: 95.5%;
+      width: 898px;
       height: 178px;
       margin-left: auto;
       margin-right: auto;
@@ -309,8 +405,9 @@ p{
     align-items: center;
     justify-content: center;
     position: absolute;
-    left: -60px;
-    top: 40%;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 4;
     width: 54px;
     height: 54px;
@@ -328,8 +425,9 @@ p{
     align-items: center;
     justify-content: center;
     position: absolute;
-    right: -60px;
-    top: 40%;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 4;
     border-color: #E8EFFA;
     width: 54px;
