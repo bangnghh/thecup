@@ -35,40 +35,6 @@ p {
   left: 0;
   z-index: 10; }
 
-.search-popup-body {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 960px;
-  background-color: rgba(0, 0, 0, 0.85);
-  z-index: 12;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.2s ease; }
-  .search-popup-body .search-popup-holder {
-    width: 50%;
-    height: 200px; }
-    .search-popup-body .search-popup-holder .input-group {
-      display: inline-flex;
-      width: 85%;
-      height: 70px; }
-      .search-popup-body .search-popup-holder .input-group input {
-        border-radius: 40px;
-        font-size: 22px;
-        padding-left: 40px; }
-    .search-popup-body .search-popup-holder button {
-      display: inline-flex;
-      font-size: 39px;
-      margin-left: 24px;
-      color: #767676;
-      letter-spacing: 1px; }
-      .search-popup-body .search-popup-holder button i {
-        color: white; }
-
 .navbar {
   background-color: #1B3864;
   height: 62px; }
@@ -357,8 +323,7 @@ p {
     background-color: white; }
     .radio-holder .btn-radio-prev span {
       display: flex;
-      align-items: center;
-      margin-left: 5px; }
+      align-items: center; }
   .radio-holder .btn-radio-next {
     display: flex;
     align-items: center;
@@ -447,16 +412,16 @@ p {
     display: block; }
     .news-holder .news-main .news-other-post .other-post {
       margin-top: 20px; }
-      .news-holder .news-main .news-other-post .other-post .col-md-4 {
+      .news-holder .news-main .news-other-post .other-post .col-5 {
         position: relative; }
-        .news-holder .news-main .news-other-post .other-post .col-md-4 .post-img {
+        .news-holder .news-main .news-other-post .other-post .col-5 .post-img {
           width: 100%; }
-        .news-holder .news-main .news-other-post .other-post .col-md-4 .listenable-box {
+        .news-holder .news-main .news-other-post .other-post .col-5 .listenable-box {
           display: flex;
           left: 12px;
           align-items: center;
           bottom: 0;
-          width: 49px;
+          width: 48px;
           height: 48px;
           background-color: #FF8C26;
           position: absolute;
@@ -521,6 +486,20 @@ p {
         font-weight: 500;
         line-height: 16.8px;
         text-transform: uppercase; }
+  .news-holder .comment {
+    margin-top: 60px; }
+    .news-holder .comment .comment-block .col-md-10 {
+      padding-left: 20px; }
+      .news-holder .comment .comment-block .col-md-10 .comment-text {
+        font-style: italic;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 140%;
+        color: #767676; }
+      .news-holder .comment .comment-block .col-md-10 .post {
+        font-size: 15px;
+        color: #767676;
+        font-weight: bold; }
 
 .footer-holder {
   margin-top: 40px;
@@ -2271,7 +2250,7 @@ p {
       .post-body .news-holder .news-main .post-holder .post-content .q-and-a-collapse-holder .collapse .vertical-divider {
         position: absolute;
         width: 1px;
-        height: 55px;
+        height: 90%;
         border-left: 1px dashed #ABC6EF;
         top: 0px;
         left: 30px; }
@@ -2279,6 +2258,7 @@ p {
       background-color: #E8EFFA;
       transition: 0.3s ease; }
   .post-body .news-holder .news-main .post-holder .post-content .subsidiary {
+    margin-top: 120px;
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
@@ -2296,6 +2276,15 @@ p {
       display: block;
       margin: auto;
       padding-top: 20px; }
+      .post-body .news-holder .news-main .post-holder .post-content .maxim-holder .comma:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        width: 100px;
+        height: 1px;
+        border: 1px solid black;
+        z-index: 1; }
     .post-body .news-holder .news-main .post-holder .post-content .maxim-holder .maxim {
       padding-top: 25px;
       font-style: italic;
@@ -2684,7 +2673,8 @@ p {
         margin-top: 60px; }
     .my-account-body .contact-holder .left {
       width: 46%;
-      padding-left: 60px; }
+      padding-left: 60px;
+      padding-right: 15px; }
       .my-account-body .contact-holder .left .text-head {
         display: flex;
         justify-content: space-between; }
@@ -2707,18 +2697,51 @@ p {
           color: #2270E8; }
       .my-account-body .contact-holder .left .trial-card {
         margin-top: 20px;
-        height: 183px;
+        padding: 22px;
+        height: 185px;
         width: 100%;
         background-image: url("/thecup/resources/img/trial-card.svg");
         background-repeat: no-repeat; }
       .my-account-body .contact-holder .left .sixmonth-card {
-        margin-top: 30px;
-        height: 183px;
+        margin-top: 35px;
+        padding: 22px;
+        height: 185px;
         width: 100%;
         background-image: url("/thecup/resources/img/sixmonth-card.svg");
         background-repeat: no-repeat; }
+        .my-account-body .contact-holder .left .sixmonth-card .white {
+          color: white !important; }
+      .my-account-body .contact-holder .left .card-inner .card-title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 152.34%;
+        color: #22539D; }
+      .my-account-body .contact-holder .left .card-inner .card-scope {
+        margin-top: 14px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 152.34%;
+        color: #22539D; }
+      .my-account-body .contact-holder .left .card-inner .expire {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px; }
+        .my-account-body .contact-holder .left .card-inner .expire .text {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 152.34%;
+          color: #767676; }
+        .my-account-body .contact-holder .left .card-inner .expire .date {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 152.34%;
+          color: #333333; }
       .my-account-body .contact-holder .left .btn-primary {
-        margin-top: 20px;
+        margin-top: 15px;
         width: 100%;
         font-style: normal;
         font-weight: bold;

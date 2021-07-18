@@ -38,46 +38,6 @@ p{
   left: 0;
   z-index: 10;
 }
-.search-popup-body{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 960px;
-  background-color: rgba(0, 0, 0, 0.85);
-  z-index: 12;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.2s ease;
-  .search-popup-holder{
-    width: 50%;
-    height: 200px;
-    .input-group{
-      display: inline-flex;
-      width: 85%;
-      height: 70px;
-      input{
-        border-radius: 40px;
-        font-size: 22px;
-        padding-left: 40px;
-      }
-    }
-    button{
-      display: inline-flex;
-
-      font-size: 39px;
-      margin-left: 24px;
-      color: #767676;
-      letter-spacing: 1px;
-      i{
-        color: white;
-      }
-    }
-  }
-}
 .navbar{
   background-color: $navbar-color;
   height: 62px;
@@ -417,7 +377,6 @@ p{
     span{
       display: flex;
       align-items: center;
-      margin-left: 5px;
     }
   }
   .btn-radio-next{
@@ -534,7 +493,7 @@ p{
       display: block;
       .other-post{
         margin-top: 20px;
-        .col-md-4{
+        .col-5{
           position: relative;
           .post-img{
             width: 100%;
@@ -544,13 +503,14 @@ p{
             left: 12px;
             align-items: center;
             bottom: 0;
-            width: 49px;
+            width: 48px;
             height: 48px;
             background-color: #FF8C26;
             position: absolute;
             border-radius: 12px 12px 12px 0px;
             .listenable-icon{
             }
+
           }
         }
         img{
@@ -630,6 +590,27 @@ p{
         text-transform: uppercase;
       }
     }
+  }
+  .comment {
+    margin-top: 60px;
+    .comment-block{
+      .col-md-10{
+        padding-left: 20px;
+        .comment-text{
+          font-style: italic;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 140%;
+          color: #767676;
+        }
+        .post{
+          font-size: 15px;
+          color: #767676;
+          font-weight: bold;
+        }
+      }
+    }
+
   }
 }
 .footer-holder{
@@ -2846,7 +2827,7 @@ p{
               .vertical-divider{
                 position: absolute;
                 width: 1px;
-                height: 55px;
+                height: 90%;
                 border-left: 1px dashed #ABC6EF;
                 top: 0px;
                 left: 30px;
@@ -2858,6 +2839,7 @@ p{
             }
           }
           .subsidiary{
+            margin-top: 120px;
             font-style: normal;
             font-weight: bold;
             font-size: 16px;
@@ -2876,6 +2858,16 @@ p{
               display: block;
               margin: auto;
               padding-top: 20px;
+              &:before{
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "";
+                width: 100px;
+                height: 1px;
+                border: 1px solid black;
+                z-index: 1;
+              }
             }
             .maxim{
               padding-top: 25px;
@@ -3350,6 +3342,7 @@ p{
     .left{
       width: 46%;
       padding-left: 60px;
+      padding-right: 15px;
       .text-head{
         display: flex;
         justify-content: space-between;
@@ -3376,20 +3369,61 @@ p{
       }
       .trial-card{
         margin-top: 20px;
-        height: 183px;
+        padding: 22px;
+        height: 185px;
         width: 100%;
         background-image: url("/thecup/resources/img/trial-card.svg");
         background-repeat: no-repeat;
       }
       .sixmonth-card{
-        margin-top: 30px;
-        height: 183px;
+        margin-top: 35px;
+        padding: 22px;
+        height: 185px;
         width: 100%;
         background-image: url("/thecup/resources/img/sixmonth-card.svg");
         background-repeat: no-repeat;
+        .white{
+          color: white!important;
+        }
+      }
+      .card-inner{
+        .card-title{
+          font-style: normal;
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 152.34%;
+          color: #22539D;
+        }
+        .card-scope{
+          margin-top: 14px;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 152.34%;
+          color: #22539D;
+        }
+        .expire{
+          display: flex;
+          justify-content: space-between;
+          margin-top: 40px;
+          .text{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 152.34%;
+            color: #767676;
+          }
+          .date{
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 152.34%;
+            color: #333333;
+          }
+        }
       }
       .btn-primary{
-        margin-top: 20px;
+        margin-top: 15px;
         width: 100%;
         font-style: normal;
         font-weight: bold;
