@@ -2783,14 +2783,12 @@ p{
           }
           .q-and-a-collapse-holder{
             width: 100%;
-            height: 64px;
+            height: auto;
             background-color: #E8EFFA;
             .question-holder{
               display: flex;
               align-items: center;
-              padding-top: 15px;
-              padding-right: 25px;
-              padding-left: 20px;
+              padding: 15px 25px 20px 15px;
               button{
                 display: inline-flex;
                 align-items: center;
@@ -2827,9 +2825,9 @@ p{
               .vertical-divider{
                 position: absolute;
                 width: 1px;
-                height: 90%;
+                height: 75%;
                 border-left: 1px dashed #ABC6EF;
-                top: 0px;
+                top: 10px;
                 left: 30px;
               }
             }
@@ -2839,7 +2837,7 @@ p{
             }
           }
           .subsidiary{
-            margin-top: 120px;
+            margin-top: 40px;
             font-style: normal;
             font-weight: bold;
             font-size: 16px;

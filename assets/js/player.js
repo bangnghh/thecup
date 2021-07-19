@@ -46,31 +46,18 @@ Player.prototype = {
                     // Start updating the progress of the track.
                     requestAnimationFrame(self.step.bind(self));
 
-                    // Start the wave animation if we have already loaded
-                    //wave.container.style.display = 'block';
-                    //bar.style.display = 'none';
                 },
                 onload: function() {
-                    // Start the wave animation.
-                    //wave.container.style.display = 'block';
-                    //bar.style.display = 'none';
-                    //loading.style.display = 'none';
+
                 },
                 onend: function() {
-                    // Stop the wave animation.
-                    //wave.container.style.display = 'none';
-                    //bar.style.display = 'block';
                     self.skip('next');
                 },
                 onpause: function() {
-                    // Stop the wave animation.
-                    //wave.container.style.display = 'none';
-                    //bar.style.display = 'block';
+
                 },
                 onstop: function() {
-                    // Stop the wave animation.
-                    //wave.container.style.display = 'none';
-                    //bar.style.display = 'block';
+
                 },
                 onseek: function() {
                     // Start updating the progress of the track.
@@ -80,7 +67,6 @@ Player.prototype = {
         }
 
         // Begin playing the sound.
-        console.log(sound.volume());
         sound.play();
 
         // Update the track display.
@@ -126,7 +112,6 @@ Player.prototype = {
                 index = 0;
             }
         }
-
         self.skipTo(index);
     },
 
@@ -161,9 +146,6 @@ Player.prototype = {
 
         // Update the display on the slider.
         volProgress.style.width = val * 100 + '%'
-        //var barWidth = (val * 90) / 100;
-        //barFull.style.width = (barWidth * 100) + '%';
-        //sliderBtn.style.left = (window.innerWidth * barWidth + window.innerWidth * 0.05 - 25) + 'px';
     },
 
     /**
@@ -287,7 +269,6 @@ nextBtn.addEventListener('click', function() {
 progress.addEventListener('change', function(event) {
     //console.log(progress.value);
     //console.log(progressWrapper.offsetWidth);
-    //player.seek(event.offsetX / durationProgressWrapper.offsetWidth);
     player.seek(progress.value / 100);
 });
 progress.addEventListener('click', function(event) {
