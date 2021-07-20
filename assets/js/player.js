@@ -145,7 +145,7 @@ Player.prototype = {
         Howler.volume(val);
 
         // Update the display on the slider.
-        volProgress.style.width = val * 100 + '%'
+        //volProgress.style.width = val * 100 + '%'
     },
 
     /**
@@ -276,10 +276,10 @@ progress.addEventListener('click', function(event) {
     //console.log(progressWrapper.offsetWidth);
     player.seek(event.offsetX / durationProgressWrapper.offsetWidth);
 });
-volumeProgressWrapper.addEventListener('click', function(event) {
-    console.log("Volume value: "+ event.offsetX / volumeProgressWrapper.offsetWidth);
-    //console.log(progressWrapper.offsetWidth);
-    player.volume(event.offsetX / volumeProgressWrapper.offsetWidth);
+volProgress.addEventListener('change', function(event) {
+    //console.log("Volume value: "+ event.offsetX / volumeProgressWrapper.offsetWidth);
+    console.log(volProgress.value);
+    player.volume(volProgress.value / 100);
 });
 forward10s.addEventListener('click', function () {
     player.seekForward10();
@@ -384,4 +384,14 @@ replay10s.addEventListener('click', function () {
     //     console.log("Progress Clicked!");
     //     //progress.style.width = "50%";
     // });
+    $(document).on('click', '#volumeHolder', function() {
+        console.log("volumeHolder CALLED!");
+        if (volumeProgressWrapper.style.display.toString() == 'none'){
+            volumeProgressWrapper.style.display = 'flex';
+            homePageBody.style.touchAction = 'none';
+        } else {
+            volumeProgressWrapper.style.display = 'none';
+            homePageBody.style.touchAction = 'auto';
+        }
+    });
 });
