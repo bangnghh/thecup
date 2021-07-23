@@ -3451,7 +3451,6 @@
       .post-body .restrict-layer .transition {
         transform: translateY(200px); }
     .post-body .show {
-      visibility: visible;
-      background: rgba(0, 0, 0, 0.8); } }
+      visibility: visible; } }
 
 /*# sourceMappingURL=responsive.css.map */
