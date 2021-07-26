@@ -102,6 +102,19 @@ $(document).ready(function(){
         //prevent native touch activity like scrolling
         e.preventDefault();
     });
+
+    //Post q&a icon changer
+    // $(document).on('click', '.collapse-btn', function() {
+    //     $('.collapse-btn').addClass('clicked');
+    //     console.log($('.clicked').find('span').text().trim());
+    //     if ($('.collapse-btn.clicked').find('span').text().trim() == 'add'){
+    //         $('.collapse-btn.clicked').find('span').text('remove');
+    //         $('.collapse-btn .collapsed').find('span').text('add');
+    //     } else {
+    //
+    //     }
+    //
+    // });
 });
 
 
