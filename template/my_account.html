@@ -5,6 +5,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap-datepicker.min.css">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/owlcarousel/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="../assets/css/responsive.css">
@@ -137,8 +138,11 @@
               <input type="text" class="form-control" placeholder="Email của bạn" aria-label="Recipient's username with two button addons">
             </div>
             <p class="input-name">Ngày sinh</p>
-            <div class="input-group">
-              <input type="date" name="dateofbirth" class="date-picker">
+            <div class="input-group date" data-provide="datepicker">
+              <input type="text" class="form-control">
+              <div class="input-group-addon">
+                <span class="material-icons">today</span>
+              </div>
             </div>
           </div>
         </div>
@@ -179,11 +183,11 @@
             </div>
           </div>
         </div>
-        <button class="btn btn-primary">
-          <a href="/thecup/template/purchase.html">
+        <a href="/thecup/template/purchase.html">
+          <button class="btn btn-primary">
             Nâng cấp gói
-          </a>
-        </button>
+          </button>
+        </a>
         <div class="sixmonth-card">
           <div class="card-inner">
             <p class="card-title white">Dùng thử</p>
@@ -194,13 +198,11 @@
             </div>
           </div>
         </div>
-        <button class="btn btn-primary">
-          <a href="/thecup/template/purchase.html">
-            Nâng cấp gói
-          </a>
-
-        </button>
-
+        <a href="/thecup/template/purchase.html">
+          <button class="btn btn-primary">
+              Nâng cấp gói
+          </button>
+        </a>
       </div>
     </div>
   </div>
@@ -330,7 +332,10 @@
 <!--Footer-end-->
 <script src="../assets/js/jquery.min.js"></script>
 <script src="../assets/js/main.js"></script>
+<script src="../assets/js/datepickr.js"></script>
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/bootstrap-datepicker.min.js"></script>
+<script src="../assets/js/bootstrap-datepicker.vi.min.js"></script>
 <script src="../assets/owlcarousel/owl.carousel.min.js"></script>
 <script src="https://kit.fontawesome.com/16985780f3.js" crossorigin="anonymous"></script>
 </body>
