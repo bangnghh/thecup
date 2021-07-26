@@ -166,7 +166,7 @@
         </div>
         <button class="btn btn-primary">Cập nhật thông tin</button>
       </div>
-      <div class="col-md-5 left">
+      <div class="col-md-5 left order-first order-md-last">
         <div class="text-head">
           <p class="text">thông tin gói sử dụng</p>
           <button class="btn" id="purchaseHistory">
@@ -210,7 +210,44 @@
 <!--Contact-end-->
 <div class="popup-purchase" id="popupPurchase">
   <div class="holder">
-
+    <div class="upper">
+      <span>Lịch sử mua gói</span>
+      <button class="btn" id="purchaseHisCloseBtn">
+        <img src="/thecup/resources/img/icon/ic_x.svg" width="16" height="16" alt="">
+      </button>
+    </div>
+    <div class="lower">
+      <table class="table table-hover">
+        <thead>
+        <tr>
+          <th scope="col">Ngày</th>
+          <th scope="col">Gói mua</th>
+          <th scope="col">Hình thức thanh toán</th>
+          <th scope="col">Thành tiền</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th scope="row">15/04/2021</th>
+          <td>Dùng thử</td>
+          <td>Miễn phí</td>
+          <td>0 VND</td>
+        </tr>
+        <tr>
+          <th scope="row">18/04/2021</th>
+          <td>3 tháng</td>
+          <td>Chuyển khoản</td>
+          <td>500.000 VND</td>
+        </tr>
+        <tr>
+          <th scope="row">19/07/2021</th>
+          <td>6 tháng</td>
+          <td>Chuyển khoản</td>
+          <td>890.000 VND</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
 <!--Footer-start-->
@@ -331,8 +368,8 @@
 </footer>
 <!--Footer-end-->
 <script src="../assets/js/jquery.min.js"></script>
-<script src="../assets/js/main.js"></script>
 <script src="../assets/js/datepickr.js"></script>
+<script src="../assets/js/main.js"></script>
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/bootstrap-datepicker.min.js"></script>
 <script src="../assets/js/bootstrap-datepicker.vi.min.js"></script>
