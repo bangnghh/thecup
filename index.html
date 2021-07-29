@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/ico" href="/thecup/resources/img/favicon/favicon.ico"/>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/owlcarousel/assets/owl.carousel.min.css">
@@ -175,36 +176,61 @@
                     <img src="/thecup/resources/img/radio-frame.png" alt="">
                 </div>
                 <div class="col-md-9 radio-controller">
-                    <p class="title" id="track">Bí mật đằng sau thành công của cuộc cách mạng tháng 8</p>
+                    <p class="title">Bí mật đằng sau thành công của cuộc cách mạng tháng 8</p>
                     <p class="author">Nguyễn Thành Văn</p>
                     <div class="button-holder">
-                        <button class="play-button" id="playBtn">
-                            <span class="material-icons material-icons-outlined">play_arrow</span>
-                        </button>
-                        <button id="replay10s" class="btn">
-                            <span class="material-icons material-icons-outlined">replay_10</span>
-                        </button>
-                        <button id="forward10s" class="btn">
-                            <span class="material-icons material-icons-outlined">forward_10</span>
-                        </button>
-<!--                        <div class="prog" id="durationProgressWrapper">-->
-<!--                            <input type="range" id="progress" min="1" max="100" value="50" class="progress-bar">-->
-<!--                        </div>-->
-                        <div class="prog" id="durationProgressWrapper">
-                            <input type="range" min="0" max="100" value="0" class="slider" id="progress">
-                        </div>
-                        <div class="timer-holder">
-                            <span id="timer" class="time-played">0:00</span>
-                            <span> / </span>
-                            <span id="duration" class="total-time">0:00</span>
-                        </div>
-                        <button class="btn volume-holder">
-                            <span class="material-icons material-icons-outlined" id="volumeHolder">volume_up</span>
-                            <div class="volume-bar" id="volumeProgressWrapper" style="display: none">
-                                <input type="range" min="0" max="100" value="80" class="slider" id="volProgress">
+                        <div class="podcast-infor">
+                            <span class="infor">8 phần</span>
+                            <div class="dot-seperator"></div>
+                            <span class="infor">86 phút</span>
+                            <div class="dot-seperator"></div>
+                            <span class="infor">3 bình luận</span>
+                            <div class="dot-seperator"></div>
+                            <div class="rating-holder">
+            <span class="material-icons material-icons-outlined">
+            star
+            </span>
+                                <span class="material-icons material-icons-outlined">
+            star
+            </span>
+                                <span class="material-icons material-icons-outlined">
+            star
+            </span>
+                                <span class="material-icons material-icons-outlined">
+            star
+            </span>
+                                <span class="material-icons material-icons-outlined">
+            star_half
+            </span>
+                                <span class="quantity">(23)</span>
                             </div>
-                        </button>
-                        </button>
+                        </div>
+                        <div class="play-and-sharing">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <button class="btn btn-primary play-button d-flex align-items-center"
+                                    id="playAllBtn">
+                                        <i class="fas fa-play"></i>
+                                        <span class="ms-auto">Nghe tất cả</span>
+                                    </button>
+                                </div>
+                                <div class="col-12 col-md-6 order-first order-md-last sharing">
+                                    <span>Chia sẻ</span>
+                                    <div class="social">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </div>
+                                    <div class="social">
+                                        <i class="fab fa-twitter"></i>
+                                    </div>
+                                    <div class="social">
+                                        <i class="fab fa-instagram"></i>
+                                    </div>
+                                    <div class="social">
+                                        <i class="fab fa-youtube"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -212,12 +238,12 @@
         <div class="radio-frame-behind1"></div>
         <div class="radio-frame-behind2"></div>
         <div class="radio-nav">
-            <button class="btn btn-radio-prev" id="prevBtn">
+            <button class="btn btn-radio-prev">
                 <span class="material-icons material-icons-outlined">
                 chevron_left
                 </span>
             </button>
-            <button class="btn btn-radio-next" id="nextBtn">
+            <button class="btn btn-radio-next">
                 <span class="material-icons material-icons-outlined">
                 chevron_right
                 </span>
@@ -703,16 +729,16 @@
             <a href="/thecup/template/my_account.html">
                 <button class="btn btn-primary btn-reg">Đăng nhập</button>
             </a>
-            <a href="">
+            <button class="btn btn-forgot-password" id="forgotPwBtn">
                 <p class="forgot-password">Bạn quên mật khẩu?</p>
-            </a>
+            </button>
         </div>
         <div class="lower">
             <div class="login-block">
                 <span class="text">Bạn chưa có tài khoản?</span>
-                <a href="/thecup/template/register.html">
+                <button class="btn btn-switchto-reg" id="switchToRegBtn">
                     <span class="login">Đăng ký ngay</span>
-                </a>
+                </button>
             </div>
         </div>
     </div>
@@ -765,14 +791,59 @@
         <div class="lower">
             <div class="login-block">
                 <span class="text">Bạn đã có tài khoản?</span>
-                <a href="/thecup/template/login.html">
+                <button class="btn btn-switchto-login" id="switchToLoginBtn">
                     <span class="login">Đăng nhập ngay</span>
-                </a>
+                </button>
             </div>
         </div>
     </div>
     <div class="exit-button">
         <button class="btn" id="exitRegFormBtn">
+            <div class="border">
+        <span class="material-icons material-icons-outlined">
+            close
+        </span>
+            </div>
+            <p>Đóng</p>
+        </button>
+    </div>
+</div>
+<div id="forgotPassBody" class="register-body fixed-top">
+    <div class="logo-thecup">
+        <img src="/thecup/resources/img/logo-login-register.svg" alt="">
+    </div>
+    <div class="register-holder">
+        <div class="upper">
+            <p class="reg-title">Quên mật khẩu</p>
+            <p class="username">Email bạn đã dùng để đăng ký</p>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Email của bạn"
+                       aria-label="">
+            </div>
+            <button class="btn btn-primary btn-reg">Gửi thông tin</button>
+            <div class="divider"></div>
+            <div class="oauth-button">
+                <button class="btn btn-primary btn-facebook">
+                    <img src="/thecup/resources/img/Button/facebook.svg" alt="">
+                    <span>Facebook</span>
+                </button>
+                <button class="btn btn-outline-success btn-google">
+                    <img src="/thecup/resources/img/Button/google.svg" alt="">
+                    <span>Google</span>
+                </button>
+            </div>
+        </div>
+        <div class="lower">
+            <div class="login-block">
+                <span class="text">Bỏ qua bước này?</span>
+                <a href="/thecup/">
+                    <span class="login">Về trang chủ</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="exit-button">
+        <button class="btn" id="exitForgotPwFormBtn">
             <div class="border">
         <span class="material-icons material-icons-outlined">
             close
@@ -796,6 +867,58 @@
     </form>
 </div>
 
+<div class="podcast-player-holder">
+    <div class="upper">
+        <span class="podcast-title">Hài lòng với nhưng thứ đã có sẽ làm bạn hạnh phúc hơn</span>
+        <div class="dot-seperator"></div>
+        <span class="podcast-name" id="track">Phần 2: Quẳng gánh lo đi mà sống</span>
+    </div>
+    <div class="divider"></div>
+    <div class="lower">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 button-holder">
+                    <button class="btn">
+                        <span class="material-icons smaterial-icons-outlined">playlist_play</span>
+                    </button>
+                    <button class="btn btn-speed" id="speedBtn1X">
+                        <span class="play-speed">1X</span>
+                    </button>
+                    <button class="btn volume-holder">
+                        <span class="material-icons material-icons-outlined" id="volumeHolder">volume_up</span>
+                        <div class="volume-bar" id="volumeProgressWrapper" style="display: none">
+                            <input type="range" min="0" max="100" value="80" class="slider" id="volProgress">
+                        </div>
+                    </button>
+                    <button class="btn" id="prevBtn">
+                        <span class="material-icons material-icons-outlined">skip_previous</span>
+                    </button>
+                    <button id="replay10s" class="btn">
+                        <span class="material-icons material-icons-outlined">replay_10</span>
+                    </button>
+                    <button class="btn play-button" id="playBtn">
+                       <span class="material-icons material-icons-outlined">
+                        play_arrow
+                        </span>
+                    </button>
+                    <button id="forward10s" class="btn">
+                        <span class="material-icons material-icons-outlined">forward_10</span>
+                    </button>
+                    <button class="btn" id="nextBtn">
+                        <span class="material-icons material-icons-outlined">skip_next</span>
+                    </button>
+                </div>
+                <div class="col-md-6 progress-holder">
+                    <span id="timer" class="time-played">0:00</span>
+                    <div class="prog" id="durationProgressWrapper">
+                        <input type="range" min="0" max="100" value="0" class="slider" id="progress">
+                    </div>
+                    <span id="duration" class="total-time">0:00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <footer class="footer-holder">
     <div class="footer-upper">
         <div class="container d-flex">
