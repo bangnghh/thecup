@@ -69,6 +69,8 @@ $(document).ready(function(){
         loginBody.style.opacity= '0';
         forgotPassBody.style.visibility = 'visible';
         forgotPassBody.style.opacity= '1';
+        window.scrollTo(0, 0);
+        $("body").css("overflow", "hidden");
     });
 
     $(document).on('click', '#switchToRegBtn', function() {
@@ -95,7 +97,6 @@ $(document).ready(function(){
     $(document).on('click', '#exitRegFormBtn', function() {
         registerBody.style.visibility = 'hidden';
         registerBody.style.opacity= '0';
-        //progress.style.width = "50%";
     });
 
     $(document).on('click', '#searchBtn', function() {
@@ -128,6 +129,10 @@ $(document).ready(function(){
         e.preventDefault();
     });
     $('#searchPopupBody').on('touchmove', function(e){
+        //prevent native touch activity like scrolling
+        e.preventDefault();
+    });
+    $('#forgotPassBody').on('touchmove', function(e){
         //prevent native touch activity like scrolling
         e.preventDefault();
     });

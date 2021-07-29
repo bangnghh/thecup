@@ -3209,18 +3209,22 @@ p{
 //Register & Login Page
 .login-body{
   .register-holder{
-
+    height: 550px!important;
     .upper{
-
+      padding: 40px 40px 26px 40px!important;
     }
-    .forgot-password{
+    .btn-forgot-password{
+      width: 100%;
       margin-top: 20px;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 14px;
-      line-height: 16px;
-      color: #2270E8;
-      text-align: center;
+      .forgot-password{
+        margin-top: 0px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        color: #2270E8;
+        text-align: center;
+      }
     }
   }
 }
@@ -3235,7 +3239,7 @@ p{
     margin-right: auto;
   }
   .register-holder{
-    height: 550px!important;
+    height: 600px;
     width: 450px;
     margin-top: 32px;
     margin-left: auto;
@@ -3245,7 +3249,7 @@ p{
     box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.07);
     border-radius: 5px;
     .upper{
-      padding: 40px 40px 40px 40px!important;
+      padding: 40px 40px 54px 40px;
       .reg-title{
         text-align: center;
         font-style: normal;
@@ -3426,7 +3430,7 @@ p{
 }
 #forgotPassBody{
   .register-holder{
-    height: 430px!important;
+    height: 455px!important;
   }
 }
 
