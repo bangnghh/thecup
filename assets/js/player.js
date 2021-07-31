@@ -28,7 +28,7 @@ var Player = function (playlist) {
         console.log(playlist[0].name);
         track.innerHTML = playlist[0].name;
     } else {
-        console.log("chua load");
+        console.log("Failed to load playlist");
     }
 };
 Player.prototype = {
@@ -183,7 +183,6 @@ Player.prototype = {
         var sound = self.playlist[self.index].howl;
 
         // Convert the percent into a seek position.
-
         if (sound.playing()) {
             sound.seek(sound.duration() * per);
         }
@@ -288,14 +287,20 @@ nextBtn.addEventListener('click', function () {
     $('.btn-speed').attr('id', 'speedBtn1X');
 });
 progress.addEventListener('change', function (event) {
-    //console.log(progress.value);
+    //console.log(progress.value / 100);
     //console.log(progressWrapper.offsetWidth);
     player.seek(progress.value / 100);
 });
 progress.addEventListener('click', function (event) {
-    //console.log(progress.value);
-    //console.log(progressWrapper.offsetWidth);
-    player.seek(event.offsetX / durationProgressWrapper.offsetWidth);
+    var progVal = event.offsetX / progress.offsetWidth;
+
+    if (progVal < 0){
+        progVal = 0;
+    }
+    if (progVal > 1){
+        progVal = 1;
+    }
+    player.seek(progVal);
 });
 volProgress.addEventListener('change', function (event) {
     //console.log("Volume value: "+ event.offsetX / volumeProgressWrapper.offsetWidth);
