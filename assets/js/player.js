@@ -286,7 +286,12 @@ nextBtn.addEventListener('click', function () {
     $('.btn-speed').find('span').text('1X');
     $('.btn-speed').attr('id', 'speedBtn1X');
 });
-progress.addEventListener('change', function (event) {
+progress.addEventListener('touchmove', function (event) {
+    //console.log(progress.value / 100);
+    //console.log(progressWrapper.offsetWidth);
+    player.seek(progress.value / 100);
+});
+progress.addEventListener('touch', function (event) {
     var progVal = event.offsetX / progress.offsetWidth;
 
     if (progVal < 0){
