@@ -80,8 +80,11 @@ Player.prototype = {
                     requestAnimationFrame(self.step.bind(self));
 
                 },
-                onerror: function (){
-                    soundState.innerHTML = '(Âm thanh bị lỗi)';
+                onplayerror: function (){
+                    soundState.innerHTML = '(Không thể phát track)';
+                },
+                onloaderror: function (){
+                    soundState.innerHTML = '(Không tải được track)';
                 },
                 onload: function () {
                     soundState.innerHTML = "(Đang tải)";
