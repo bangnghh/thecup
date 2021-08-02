@@ -137,9 +137,10 @@
                 <div class="play-and-sharing">
                     <div class="row">
                         <div class="col-md-4">
-                            <button class="btn btn-primary play-button d-flex align-items-center">
+                            <button class="btn btn-primary play-button d-flex align-items-center"
+                                    id="playAllBtn" onclick="loadPlaylist(soundObj)">
                                 <i class="fas fa-play"></i>
-                                <span class="ms-auto">Nghe tất cả</span>
+                                <span class="ms-auto">Nghe Podcast</span>
                             </button>
                         </div>
                         <div class="col-md-6 sharing">
@@ -280,13 +281,14 @@
         <span class="podcast-title">Hài lòng với nhưng thứ đã có sẽ làm bạn hạnh phúc hơn</span>
         <div class="dot-seperator"></div>
         <span class="podcast-name" id="track">Phần 2: Quẳng gánh lo đi mà sống</span>
+        <span class="podcast-name" id="soundState">(Đang tạm dừng)</span>
     </div>
     <div class="divider"></div>
     <div class="lower">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 button-holder">
-                    <button class="btn">
+                    <button class="btn" id="togglePlaylist">
                         <span class="material-icons smaterial-icons-outlined">playlist_play</span>
                     </button>
                     <button class="btn btn-speed" id="speedBtn1X">
@@ -304,7 +306,7 @@
                     <button id="replay10s" class="btn">
                         <span class="material-icons material-icons-outlined">replay_10</span>
                     </button>
-                    <button class="play-button" id="playBtn">
+                    <button class="btn play-button" id="playBtn">
                        <span class="material-icons material-icons-outlined">
                         play_arrow
                         </span>
@@ -318,16 +320,18 @@
                 </div>
                 <div class="col-md-6 progress-holder">
                     <span id="timer" class="time-played">0:00</span>
-                    <div class="progress" id="durationProgressWrapper">
-                        <div id="progress" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="25"
-                             aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="prog" id="durationProgressWrapper">
+                        <input type="range" min="0" max="100" value="0" class="slider" id="progress">
                     </div>
                     <span id="duration" class="total-time">0:00</span>
                 </div>
             </div>
         </div>
     </div>
+    <div class="divider"></div>
+
 </div>
+<div class="soundlist-holder" id="soundListHolder" style="visibility: hidden"></div>
 <!--Podcast-player-end-->
 <!--Footer-start-->
 <footer class="footer-holder">
@@ -446,9 +450,20 @@
     </div>
 </footer>
 <!--Footer-end-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.core.min.js" integrity="sha512-+wqa4/aOL4vwhL637A4p+6epqhUHDqpEfYJa1+PlzlMf908CSOb3xtIeKwZWh5Q0Q/R2nYUKxH4vvcQg+k8KKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    soundObj = {
+        sound: [
+            {
+                "name": "Bài hát số 2",
+                "link": "https://thecuppodcast.s3.ap-southeast-1.amazonaws.com/files/07fb07f66f04d123460859d7f757fae2.mp3"
+            }
+        ]
+    };
+</script>
 <script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/howler.min.js"></script>
 <script src="../assets/js/player.js"></script>
+<script src="../assets/js/main.js"></script>
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/owlcarousel/owl.carousel.min.js"></script>
 <script src="https://kit.fontawesome.com/16985780f3.js" crossorigin="anonymous"></script>
