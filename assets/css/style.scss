@@ -1766,9 +1766,11 @@ p{
           border-radius: 16px;
           display: flex;
           align-items: center;
+          cursor: pointer;
           .row{
             height: 122px;
             margin-right: 20px;
+            width: 754px;
           }
           .podcast-play{
             display: inline-grid;

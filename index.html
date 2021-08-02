@@ -15,7 +15,7 @@
           rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"/>
 </head>
-<body class="homepage-body" id="homePageBody" style="touch-action: auto">
+<body class="homepage-body" id="playerPageBody" style="touch-action: auto">
 <!--Navigator-bar-->
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
@@ -211,7 +211,7 @@
                             <div class="row">
                                 <div class="col-12 col-md-4">
                                     <button class="btn btn-primary play-button d-flex align-items-center"
-                                    id="playAllBtn" onclick="loadPlaylist(soundObj)">
+                                    id="playAllBtn">
                                         <i class="fas fa-play"></i>
                                         <span class="ms-auto">Nghe tất cả</span>
                                     </button>
@@ -1047,6 +1047,16 @@
 </footer>
 <!--Footer-end-->
 
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.core.min.js"-->
+<!--        integrity="sha512-+wqa4/aOL4vwhL637A4p+6epqhUHDqpEfYJa1+PlzlMf908CSOb3xtIeKwZWh5Q0Q/R2nYUKxH4vvcQg+k8KKQ=="-->
+<!--        crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/howler.min.js"></script>
+<script src="assets/js/player.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/owlcarousel/owl.carousel.min.js"></script>
+<script src="https://kit.fontawesome.com/16985780f3.js" crossorigin="anonymous"></script>
 <script>
     soundObj = {
         sound: [
@@ -1064,17 +1074,8 @@
             }
         ]
     };
+    loadPlaylist(soundObj);
+    generateList();
 </script>
-
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.core.min.js"-->
-<!--        integrity="sha512-+wqa4/aOL4vwhL637A4p+6epqhUHDqpEfYJa1+PlzlMf908CSOb3xtIeKwZWh5Q0Q/R2nYUKxH4vvcQg+k8KKQ=="-->
-<!--        crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/howler.min.js"></script>
-<script src="assets/js/player.js"></script>
-<script src="assets/js/main.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/owlcarousel/owl.carousel.min.js"></script>
-<script src="https://kit.fontawesome.com/16985780f3.js" crossorigin="anonymous"></script>
 </body>
 </html>

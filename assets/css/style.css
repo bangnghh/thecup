@@ -1423,10 +1423,12 @@ p {
       box-sizing: border-box;
       border-radius: 16px;
       display: flex;
-      align-items: center; }
+      align-items: center;
+      cursor: pointer; }
       .podcast-episodes-body .news-holder .news-main .news-other-post .podcast .row {
         height: 122px;
-        margin-right: 20px; }
+        margin-right: 20px;
+        width: 754px; }
       .podcast-episodes-body .news-holder .news-main .news-other-post .podcast .podcast-play {
         display: inline-grid;
         justify-content: center;
