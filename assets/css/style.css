@@ -1742,7 +1742,7 @@ p {
       .podcast-single-body .podcast-holder .podcast-player-inner .podcast-play .play-and-sharing {
         margin-top: 60px; }
         .podcast-single-body .podcast-holder .podcast-player-inner .podcast-play .play-and-sharing .play-button {
-          padding: 6px 20px 6px 26px;
+          padding: 6px 20px 6px 20px;
           height: 52px;
           width: 188px;
           border-radius: 100px;
@@ -1753,7 +1753,7 @@ p {
           .podcast-single-body .podcast-holder .podcast-player-inner .podcast-play .play-and-sharing .play-button span {
             text-transform: uppercase;
             font-weight: 900;
-            font-size: 16px;
+            font-size: 15px;
             line-height: 140%;
             letter-spacing: 0.05em;
             color: white; }
