@@ -1,8 +1,10 @@
 let globalPlaylist = [];
 let playListIsLoaded = false;
+let playAllBtnIsClicked = false;
+let playBtnState = 'pause';
 
 function loadPlaylist(soundObj) {
-    console.log("Da chay vao loadPlaylist");
+    //console.log("Da chay vao loadPlaylist");
     var playlist = [];
     var sound = soundObj.sound;
     for (let i = 0; i < sound.length; i++) {
@@ -15,7 +17,7 @@ function loadPlaylist(soundObj) {
 }
 
 function generateList(){
-    console.log("generateList Called!");
+    //console.log("generateList Called!");
     let soundlist = document.getElementById('soundListHolder');
     console.log(globalPlaylist.length);
     for (let i = 0; i < globalPlaylist.length; i++) {
@@ -28,10 +30,23 @@ function generateList(){
 }
 
 function playById(id){
-    playAllBtn.click();
+    if (playAllBtnIsClicked != true){
+        console.log("Da chay vao ham");
+        playAllBtn.click();
+        playAllBtnIsClicked = true;
+    } else {
+        console.log("Khong chay vao ham");
+    }
+
+    $('#playBtn').find('span').text('pause');
+    $('#playBtn').attr('id', 'pauseBtn');
+
+    $('.btn-speed').find('span').text('1X');
+    $('.btn-speed').attr('id', 'speedBtn1X');
+
     Howler.stop();
     window.scrollTo(0, document.body.scrollHeight);
-    player.play(id);
+    player.skipTo(id);
 }
 /**
  * Player class containing the state of our playlist and where we are in it.
@@ -295,7 +310,25 @@ $(document).on('click', '#playAllBtn', function () {
     $('.podcast-player-holder').css("display", "block");
     $('footer').css("margin-top", "0px");
     window.scrollTo(0, document.body.scrollHeight);
-    playBtn.click();
+    if (playBtnState == 'pause'){
+        playBtn.click();
+    }
+});
+
+$(document).on('click', '#playBtn', function () {
+    console.log("PLAY CALLED!");
+    $('#playBtn').find('span').text('pause');
+    $('#playBtn').attr('id', 'pauseBtn');
+    playBtnState = 'play';
+    player.play();
+});
+
+$(document).on('click', '#pauseBtn', function () {
+    console.log("PAUSE CALLED!");
+    $('#pauseBtn').find('span').text('play_arrow');
+    $('#pauseBtn').attr('id', 'playBtn');
+    playBtnState = 'pause';
+    player.pause();
 });
 
 prevBtn.addEventListener('click', function () {
@@ -357,19 +390,6 @@ forward10s.addEventListener('click', function () {
 });
 replay10s.addEventListener('click', function () {
     player.seekBackward10();
-});
-
-$(document).on('click', '#playBtn', function () {
-    console.log("PLAY CALLED!");
-    $('#playBtn').find('span').text('pause');
-    $('#playBtn').attr('id', 'pauseBtn');
-    player.play();
-});
-$(document).on('click', '#pauseBtn', function () {
-    console.log("PAUSE CALLED!");
-    $('#pauseBtn').find('span').text('play_arrow');
-    $('#pauseBtn').attr('id', 'playBtn');
-    player.pause();
 });
 
 $(document).on('click', '#volumeHolder', function () {
