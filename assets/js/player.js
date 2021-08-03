@@ -31,11 +31,11 @@ function generateList(){
 
 function playById(id){
     if (playAllBtnIsClicked != true){
-        console.log("Da chay vao ham");
+        console.log("playAllBtnIsClicked = false");
         playAllBtn.click();
         playAllBtnIsClicked = true;
     } else {
-        console.log("Khong chay vao ham");
+        console.log("playAllBtnIsClicked = true");
     }
 
     $('#playBtn').find('span').text('pause');
@@ -46,7 +46,7 @@ function playById(id){
 
     Howler.stop();
     window.scrollTo(0, document.body.scrollHeight);
-    player.skipTo(id);
+    player.play(id);
 }
 /**
  * Player class containing the state of our playlist and where we are in it.
@@ -305,16 +305,6 @@ Player.prototype = {
 
 // Setup our new audio player class and pass it the playlist.
 
-
-$(document).on('click', '#playAllBtn', function () {
-    $('.podcast-player-holder').css("display", "block");
-    $('footer').css("margin-top", "0px");
-    window.scrollTo(0, document.body.scrollHeight);
-    if (playBtnState == 'pause'){
-        playBtn.click();
-    }
-});
-
 $(document).on('click', '#playBtn', function () {
     console.log("PLAY CALLED!");
     $('#playBtn').find('span').text('pause');
@@ -329,6 +319,16 @@ $(document).on('click', '#pauseBtn', function () {
     $('#pauseBtn').attr('id', 'playBtn');
     playBtnState = 'pause';
     player.pause();
+});
+
+$(document).on('click', '#playAllBtn', function () {
+    $('.podcast-player-holder').css("display", "block");
+    $('footer').css("margin-top", "0px");
+    window.scrollTo(0, document.body.scrollHeight);
+    console.log(playBtnState);
+    if (playBtnState == 'pause'){
+        playBtn.click();
+    }
 });
 
 prevBtn.addEventListener('click', function () {
