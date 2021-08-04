@@ -52,20 +52,8 @@ p {
   .navbar .navbar-nav {
     display: flex;
     align-items: center; }
-    .navbar .navbar-nav .dropdown-menu {
-      transition: all 0.3s ease;
-      opacity: 0;
-      visibility: hidden;
-      display: block;
-      height: 0;
-      padding: 0; }
-      .navbar .navbar-nav .dropdown-menu .dropdown-item {
-        font-weight: 600; }
-    .navbar .navbar-nav .dropdown-menu.show {
-      transition: all 0.3s ease;
-      visibility: visible;
-      opacity: 1;
-      height: auto; }
+    .navbar .navbar-nav .dropdown-menu .dropdown-item {
+      font-weight: 600; }
   .navbar .btn-light {
     border-radius: 16px;
     color: #1B3864;

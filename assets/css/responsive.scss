@@ -58,15 +58,14 @@ $navbar-color : #1B3864;
             line-height: 16px;
           }
           .dropdown-menu{
-            transition: all 0.3s ease;
-            opacity: 0;
-            visibility: hidden;
-            display: block;
-            height: 0;
-            padding: 0;
-            background-color: $navbar-color;
-
-            border: none;
+            //transition: all 0.3s ease;
+            //opacity: 0;
+            //visibility: hidden;
+            //display: block;
+            //height: 0;
+            //padding: 0;
+            //background-color: $navbar-color;
+            //border: none;
             .dropdown-item{
               font-weight: 500;
               font-size: 14px;
@@ -79,10 +78,10 @@ $navbar-color : #1B3864;
             }
           }
           .dropdown-menu.show{
-            transition: all 0.3s ease;
-            visibility: visible;
-            opacity: 1;
-            height: auto;
+            //transition: all 0.3s ease;
+            //visibility: visible;
+            //opacity: 1;
+            //height: auto;
           }
           .fa-search{
             color: white!important;
