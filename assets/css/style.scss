@@ -39,56 +39,56 @@ p{
   left: 0;
   z-index: 10;
 }
-.navbar{
-  background-color: $navbar-color;
-  height: 62px;
-  .nav-item{
-    margin-left: 30px;
-    .nav-link{
-      color: rgba(255,255,255,1)!important;
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 16px;
-    }
-    .fa-search{
-      color: white!important;
-      font-size: 14px;
-    }
-  }
-  .navbar-nav{
-    display: flex;
-    align-items: center;
-    .dropdown-menu{
-      //transition: all 0.3s ease;
-      //opacity: 0;
-      //visibility: hidden;
-      //display: block;
-      //height: 0;
-      //padding: 0;
-      .dropdown-item{
-        font-weight: 600;
-      }
-    }
-    .dropdown-menu.show{
-      //transition: all 0.3s ease;
-      //visibility: visible;
-      //opacity: 1;
-      //height: auto;
-      //padding: auto;
-    }
-  }
-  .btn-light{
-    border-radius: 16px;
-    color: $navbar-color;
-    font-size: 14px;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-  .navbar-collapse{
-    z-index: 10;
-    background-color: $navbar-color;
-  }
-}
+//.navbar{
+//  background-color: $navbar-color;
+//  height: 62px;
+//  .nav-item{
+//    margin-left: 30px;
+//    .nav-link{
+//      color: rgba(255,255,255,1)!important;
+//      font-size: 14px;
+//      font-weight: 500;
+//      line-height: 16px;
+//    }
+//    .fa-search{
+//      color: white!important;
+//      font-size: 14px;
+//    }
+//  }
+//  .navbar-nav{
+//    //display: flex;
+//    //align-items: center;
+//    .dropdown-menu{
+//      //transition: all 0.3s ease;
+//      //opacity: 0;
+//      //visibility: hidden;
+//      //display: block;
+//      //height: 0;
+//      //padding: 0;
+//      .dropdown-item{
+//        font-weight: 600;
+//      }
+//    }
+//    .dropdown-menu.show{
+//      //transition: all 0.3s ease;
+//      //visibility: visible;
+//      //opacity: 1;
+//      //height: auto;
+//      //padding: auto;
+//    }
+//  }
+//  .btn-light{
+//    border-radius: 16px;
+//    color: $navbar-color;
+//    font-size: 14px;
+//    padding-left: 16px;
+//    padding-right: 16px;
+//  }
+//  .navbar-collapse{
+//    z-index: 10;
+//    background-color: $navbar-color;
+//  }
+//}
 .carousel-holder{
   position: relative;
   margin-top: 30px;

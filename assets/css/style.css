@@ -36,34 +36,6 @@ p {
   left: 0;
   z-index: 10; }
 
-.navbar {
-  background-color: #1B3864;
-  height: 62px; }
-  .navbar .nav-item {
-    margin-left: 30px; }
-    .navbar .nav-item .nav-link {
-      color: white !important;
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 16px; }
-    .navbar .nav-item .fa-search {
-      color: white !important;
-      font-size: 14px; }
-  .navbar .navbar-nav {
-    display: flex;
-    align-items: center; }
-    .navbar .navbar-nav .dropdown-menu .dropdown-item {
-      font-weight: 600; }
-  .navbar .btn-light {
-    border-radius: 16px;
-    color: #1B3864;
-    font-size: 14px;
-    padding-left: 16px;
-    padding-right: 16px; }
-  .navbar .navbar-collapse {
-    z-index: 10;
-    background-color: #1B3864; }
-
 .carousel-holder {
   position: relative;
   margin-top: 30px;
