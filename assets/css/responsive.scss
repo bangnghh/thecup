@@ -47,7 +47,7 @@ $navbar-color : #1B3864;
       z-index: 10;
       background-color: $navbar-color;
       .navbar-nav{
-        //align-items: start;
+        align-items: start;
         .nav-item{
           margin-left: 22px;
           margin-right: 30px;
