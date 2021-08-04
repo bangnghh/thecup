@@ -3,6 +3,11 @@
   html, body {
     overflow-x: hidden; }
 
+  .navbar {
+    background-color: #1B3864;
+    height: auto;
+    width: 100%; }
+
   .carousel-holder {
     position: relative;
     margin-top: 10px;
