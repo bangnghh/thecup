@@ -65,8 +65,7 @@ p {
       transition: all 0.3s ease;
       visibility: visible;
       opacity: 1;
-      height: auto;
-      padding: auto; }
+      height: auto; }
   .navbar .btn-light {
     border-radius: 16px;
     color: #1B3864;
@@ -93,7 +92,8 @@ p {
       transition: ease-in-out 0.3s;
       width: 100%;
       height: 100%;
-      overflow: hidden; }
+      overflow: hidden;
+      object-fit: cover; }
     .carousel-holder .owl-carousel .item .overlay {
       transition: ease-in-out 0.3s;
       opacity: 0.3;
