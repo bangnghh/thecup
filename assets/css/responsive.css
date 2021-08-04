@@ -4,6 +4,7 @@
     overflow-x: hidden; }
 
   .navbar {
+    margin-top: 150px;
     background-color: #1B3864;
     height: 62px;
     width: 100%; }
