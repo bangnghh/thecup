@@ -886,6 +886,8 @@ p {
     margin-top: 28px; }
     .comment .comment-block .col-md-11 {
       padding-left: 20px; }
+    .comment .comment-block .col-10 {
+      padding-left: 24px; }
     .comment .comment-block .user-avatar {
       width: 60px;
       height: 60px;
@@ -928,6 +930,8 @@ p {
     margin-top: 30px; }
     .comment .post-comment .col-md-11 {
       padding-left: 20px; }
+    .comment .post-comment .col-10 {
+      padding-left: 24px; }
     .comment .post-comment .user-avatar {
       width: 60px;
       height: 60px;
