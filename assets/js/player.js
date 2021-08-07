@@ -340,7 +340,7 @@ $(document).on('click', '#pauseBtn', function () {
     $('#pauseBtn').attr('id', 'playBtn');
     playBtnState = 'pause';
 
-    //soundState.innerHTML = "(Đang tạm dừng)";
+    soundState.innerHTML = "(Đang tạm dừng)";
 
     player.pause();
 });
