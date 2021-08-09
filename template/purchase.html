@@ -115,7 +115,7 @@
                     <p class="pricing">Miễn phí</p>
                     <p class="package-info">Giới hạn truy cập bài viết</p>
                     <p class="package-info">Giới hạn thời gian nghe Podcast</p>
-                    <button class="btn select-package">Chọn gói</button>
+                    <button class="btn select-package" id="loginBtn">Chọn gói</button>
                 </div>
             </div>
             <div class="col-md-3">
@@ -124,7 +124,7 @@
                     <p class="pricing" style="color: white">300.000đ</p>
                     <p class="package-info" style="color: white">Giới hạn truy cập bài viết</p>
                     <p class="package-info" style="color: white">Giới hạn thời gian nghe Podcast</p>
-                    <button class="btn select-package button-orange">Chọn gói</button>
+                    <button class="btn select-package button-orange" id="registerBtn">Chọn gói</button>
                 </div>
             </div>
             <div class="col-md-3">
@@ -151,6 +151,145 @@
 </div>
 <!--Contact-end-->
 </div>
+
+<div id="loginBody" class="login-body fixed-top" style="visibility: visible; opacity: 1">
+    <div class="logo-thecup">
+        <img src="/thecup/resources/img/logo-login-register.svg" alt="">
+    </div>
+    <div class="register-holder">
+        <div class="upper">
+            <p class="reg-title">Thông tin thanh toán</p>
+            <p class="purchase-text">Số tiền thanh toán</p>
+            <p class="purchase-amount">200.000</p>
+
+            <div class="custom-divider"></div>
+            <div class="custom-decor-left"></div>
+            <div class="custom-decor-right"></div>
+
+            <div class="purchase-information-holder">
+                <div class="line">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <p class="title">Loại thanh toán</p>
+                        </div>
+                        <div class="col-md-7">
+                            <p class="value">Thanh toán gói dịch vụ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <p class="title">Mã hóa đơn</p>
+                        </div>
+                        <div class="col-md-7">
+                            <p class="value">5BNH8HN9KCBNDGH147</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <p class="title">Nội dung thanh toán</p>
+                        </div>
+                        <div class="col-md-7">
+                            <p class="value">Thanh toán gói dịch vụ 1 tháng</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="oauth-button">
+                <button class="btn btn-outline-secondary btn-cancel-purchase">
+                    <span>Hủy bỏ</span>
+                </button>
+                <button class="btn btn-primary btn-accept-purchase">
+                    <span>Xác nhận</span>
+                </button>
+            </div>
+
+        </div>
+        <div class="lower">
+            <div class="login-block">
+                <span class="text">Mọi vấn đề phát sinh vui lòng liên hệ</span>
+                <button class="btn btn-purchase-contact">
+                    <span class="login">1800 9990</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="exit-button">
+        <button class="btn" id="exitLoginFormBtn">
+            <div class="border">
+        <span class="material-icons material-icons-outlined">
+            close
+        </span>
+            </div>
+            <p>Đóng</p>
+        </button>
+    </div>
+</div>
+<div id="registerBody" class="register-body fixed-top">
+    <div class="logo-thecup">
+        <img src="/thecup/resources/img/logo-login-register.svg" alt="">
+    </div>
+    <div class="register-holder">
+        <div class="upper">
+            <p class="reg-title">Đăng ký</p>
+            <div class="oauth-button">
+                <button class="btn btn-primary btn-facebook">
+                    <img src="/thecup/resources/img/Button/facebook.svg" alt="">
+                    <span>Facebook</span>
+                </button>
+                <button class="btn btn-outline-success btn-google">
+                    <img src="/thecup/resources/img/Button/google.svg" alt="">
+                    <span>Google</span>
+                </button>
+            </div>
+            <div class="divider"></div>
+            <p class="username">Họ và tên</p>
+            <div class="input-group">
+                <input onfocusout="scrollT()" type="text" class="form-control" placeholder="Họ và tên viết có dấu"
+                       aria-label="Recipient's username with two button addons">
+            </div>
+            <p class="email">Email</p>
+            <div class="input-group">
+                <input onfocusout="scrollT()" type="text" class="form-control" placeholder="email@gmail.com"
+                       aria-label="Recipient's username with two button addons">
+            </div>
+            <p class="password">Mật khẩu</p>
+            <div class="input-group">
+                <input onfocusout="scrollT()" type="text" class="form-control" placeholder="Mật khẩu của bạn"
+                       aria-label="Recipient's username with two button addons">
+            </div>
+            <p class="password">Nhập lại mật khẩu</p>
+            <div class="input-group">
+                <input onfocusout="scrollT()" type="text" class="form-control" placeholder="Mật khẩu của bạn"
+                       aria-label="Recipient's username with two button addons">
+            </div>
+            <button class="btn btn-primary btn-reg">Đăng ký</button>
+        </div>
+        <div class="lower">
+            <div class="login-block">
+                <span class="text">Bạn đã có tài khoản?</span>
+                <button class="btn btn-switchto-login" id="switchToLoginBtn">
+                    <span class="login">Đăng nhập ngay</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="exit-button">
+        <button class="btn" id="exitRegFormBtn">
+            <div class="border">
+        <span class="material-icons material-icons-outlined">
+            close
+        </span>
+            </div>
+            <p>Đóng</p>
+        </button>
+    </div>
+</div>
+
 <!--Footer-start-->
 <footer class="footer-holder">
     <div class="footer-upper">

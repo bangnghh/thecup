@@ -88,7 +88,6 @@
             <div class="nav-register">
                 <button class="btn btn-light" type="submit" id="loginBtn">Đăng nhập</button>
 
-
                 <button class="btn btn-light ms-1" type="submit" id="registerBtn">Đăng ký</button>
             </div>
         </div>
@@ -708,12 +707,12 @@
             <div class="divider"></div>
             <p class="username">Email hoặc tên đăng nhập</p>
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Email hoặc tên đăng nhập"
+                <input onfocusout="scrollT()" type="text" class="form-control" placeholder="Email hoặc tên đăng nhập"
                        aria-label="Recipient's username with two button addons">
             </div>
             <p class="password">Mật khẩu</p>
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Mật khẩu của bạn"
+                <input onfocusout="scrollT()" type="text" class="form-control" placeholder="Mật khẩu của bạn"
                        aria-label="Recipient's username with two button addons">
             </div>
             <a href="/thecup/template/my_account.html">
@@ -763,17 +762,22 @@
             <div class="divider"></div>
             <p class="username">Họ và tên</p>
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Họ và tên viết có dấu"
+                <input onfocusout="scrollT()" type="text" class="form-control" placeholder="Họ và tên viết có dấu"
                        aria-label="Recipient's username with two button addons">
             </div>
             <p class="email">Email</p>
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="email@gmail.com"
+                <input onfocusout="scrollT()" type="text" class="form-control" placeholder="email@gmail.com"
                        aria-label="Recipient's username with two button addons">
             </div>
             <p class="password">Mật khẩu</p>
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Mật khẩu của bạn"
+                <input onfocusout="scrollT()" type="text" class="form-control" placeholder="Mật khẩu của bạn"
+                       aria-label="Recipient's username with two button addons">
+            </div>
+            <p class="password">Nhập lại mật khẩu</p>
+            <div class="input-group">
+                <input onfocusout="scrollT()" type="text" class="form-control" placeholder="Mật khẩu của bạn"
                        aria-label="Recipient's username with two button addons">
             </div>
             <button class="btn btn-primary btn-reg">Đăng ký</button>
@@ -913,6 +917,8 @@
 
 </div>
 <div class="soundlist-holder" id="soundListHolder" style="visibility: hidden"></div>
+
+
 <footer class="footer-holder">
     <div class="footer-upper">
         <div class="container d-flex">
