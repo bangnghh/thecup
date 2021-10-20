@@ -70,7 +70,12 @@ p {
       color: white !important;
       font-size: 14px;
       font-weight: 500;
-      line-height: 16px; }
+      line-height: 16px;
+      display: inline-block;
+      padding-left: 0.25rem;
+      padding-right: 0.25rem; }
+    .navbar .nav-item .dropdown-toggle:after {
+      vertical-align: middle; }
     .navbar .nav-item .fa-search {
       color: white !important;
       font-size: 14px; }
